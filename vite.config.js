@@ -4,6 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // vite.config.js
-  base: '/BlueLeads/',
+  base: '/BlueLeads',
 })
