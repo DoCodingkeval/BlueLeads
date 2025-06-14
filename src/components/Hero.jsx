@@ -1,5 +1,5 @@
 import { div } from "motion/react-client";
-import herovid from "../assets/hero.mp4";
+import herovid from "./assets/hero.mp4";
 import { motion } from "motion/react";
 
 const Hero = () => {
