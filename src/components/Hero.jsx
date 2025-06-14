@@ -47,21 +47,22 @@ const Hero = () => {
               </motion.a>
             </motion.div>
             <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">
-              <video
-                // initial="hidden"
-                // variants={videoVariants}
-                // animate="show"
-                // transition={{
-                //   duration: 0.6,
-                // }}
-                src="/BlueLeads/hero.mp4"
+              <motion.video
+                initial="hidden"
+                variants={videoVariants}
+                animate="show"
+                transition={{
+                  duration: 0.6,
+                }}
+                src={herovid}
+                preload="none"
                 autoPlay
                 loop
                 muted
                 className="img-fluid rounded-5 rounded-lg-5 p-lg-0"
               >
                 Your browser does not support the video tag.
-              </video>
+              </motion.video>
             </div>
           </div>
         </div>

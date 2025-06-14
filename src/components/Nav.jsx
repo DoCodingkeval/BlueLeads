@@ -1,14 +1,6 @@
-import {
-  RiArrowDownFill,
-  RiArrowDownLine,
-  RiArrowDownSFill,
-  RiArrowDownSLine,
-  RiMore2Line,
-} from "react-icons/ri";
+import { RiArrowDownSLine, RiMore2Line } from "react-icons/ri";
 import { motion } from "motion/react";
-import { stagger } from "motion";
-import { label, li } from "motion/react-client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Nav = () => {
   const containerVariants = {
@@ -31,7 +23,6 @@ const Nav = () => {
 
   const navItems = [
     "Home",
-    "About",
     {
       label: "more",
       dropdown: ["Process", "Testimonials", "Insights"],
@@ -104,7 +95,7 @@ const Nav = () => {
                         aria-expanded="false"
                         onClick={toggleDropdown}
                       >
-                        <a href="" className="nav-link achevron">
+                        <a href="" className="nav-link">
                           Services
                           <RiArrowDownSLine
                             style={{

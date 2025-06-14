@@ -24,6 +24,7 @@ const Service = () => {
               >
                 <img
                   src={link}
+                  loading="lazy"
                   className="pt-3 img-fluid w-50 mx-auto"
                   alt="link img"
                 />
@@ -47,6 +48,7 @@ const Service = () => {
               >
                 <img
                   src={speaker}
+                  loading="lazy"
                   className="pt-3 img-fluid w-50 mx-auto"
                   alt="content img"
                 />
@@ -68,7 +70,7 @@ const Service = () => {
               <div
                 className="card border-0 card-odd"
               >
-                <img src={seo} className="pt-3 img-fluid w-50 mx-auto" alt="seo img" />
+                <img src={seo} loading="lazy" className="pt-3 img-fluid w-50 mx-auto" alt="seo img" />
                 <div className="card-body">
                   <h5 className="card-title pt-2 pt-lg-0">On Page SEO</h5>
                   <p className="card-text">

@@ -16,6 +16,7 @@ const Modeservice = () => {
             <div className="d-flex align-items-center justify-content-center px-lg-3 py-4 shadow">
               <img
                 src={phone}
+                loading="lazy"
                 className="img-fluid d-md-block d-none px-3"
                 style={{ width: "13rem" }}
                 alt="phone img"
@@ -35,6 +36,7 @@ const Modeservice = () => {
             <div className="d-flex align-items-center justify-content-center py-4 shadow">
               <video
                 src={influence}
+                preload="none"
                 autoPlay
                 loop
                 muted
@@ -55,6 +57,7 @@ const Modeservice = () => {
             <div className="d-flex align-items-center justify-content-center px-lg-3 py-4 shadow">
               <video
                 src={content}
+                preload="none"
                 autoPlay
                 loop
                 muted
@@ -74,6 +77,7 @@ const Modeservice = () => {
             <div className="d-flex align-items-center justify-content-center px-lg-3 py-4 shadow">
               <video
                 src={referral}
+                preload="none"
                 autoPlay
                 loop
                 muted

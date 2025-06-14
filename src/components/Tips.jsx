@@ -21,6 +21,7 @@ const Tips = () => {
                   <div className="col-lg-12">
                     <video
                       src={webdev}
+                      preload="none"
                       autoPlay
                       loop
                       muted
@@ -57,6 +58,7 @@ const Tips = () => {
                   <div className="col-lg-12">
                     <video
                       src={freelancing}
+                      preload="none"
                       autoPlay
                       loop
                       muted
@@ -93,6 +95,7 @@ const Tips = () => {
                   <div className="col-lg-12">
                     <video
                       src={graphicdesigner}
+                      preload="none"
                       autoPlay
                       loop
                       muted
@@ -128,6 +131,7 @@ const Tips = () => {
                   <div className="col-lg-12">
                     <video
                       src={wordpress}
+                      preload="none"
                       autoPlay
                       loop
                       muted

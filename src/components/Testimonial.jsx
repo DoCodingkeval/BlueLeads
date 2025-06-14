@@ -52,7 +52,7 @@ const Testimonial = () => {
                     className="card py-3 text-center bg-dark text-white"
                     style={{ width: "18rem" }}
                   >
-                    <img src={user1} className="img-fluid mx-4" alt="user" />
+                    <img src={user1} loading="lazy" className="img-fluid mx-4" alt="user" />
                     <div className="card-body">
                       <h5 className="card-title">Ravi Sharma</h5>
                       <p className="card-text mt-3">
@@ -77,6 +77,7 @@ const Testimonial = () => {
                   >
                     <img
                       src={user2}
+                      loading="lazy"
                       className="img-fluid mx-4 rounded-2"
                       alt="user"
                     />
@@ -110,6 +111,7 @@ const Testimonial = () => {
                   >
                     <img
                       src={user3}
+                      loading="lazy"
                       className="img-fluid mx-4 rounded-2"
                       alt="user"
                     />
@@ -136,6 +138,7 @@ const Testimonial = () => {
                   >
                     <img
                       src={user4}
+                      loading="lazy"
                       className="img-fluid mx-4 rounded-2"
                       alt="user"
                     />
@@ -162,6 +165,7 @@ const Testimonial = () => {
                   >
                     <img
                       src={user5}
+                      loading="lazy"
                       className="img-fluid mx-4 rounded-2"
                       alt="user"
                     />
@@ -194,6 +198,7 @@ const Testimonial = () => {
                   >
                     <img
                       src={user6}
+                      loading="lazy"
                       className="img-fluid mx-4 rounded-2"
                       alt="user"
                     />
@@ -220,6 +225,7 @@ const Testimonial = () => {
                   >
                     <img
                       src={user7}
+                      loading="lazy"
                       className="img-fluid mx-4 rounded-2"
                       alt="user"
                     />
@@ -246,6 +252,7 @@ const Testimonial = () => {
                   >
                     <img
                       src={user8}
+                      loading="lazy"
                       className="img-fluid mx-4 rounded-2"
                       alt="user"
                     />
