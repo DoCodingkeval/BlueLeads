@@ -17,12 +17,12 @@ function App() {
   useEffect(() => {
     const Timer = setTimeout(() => {
       setLoading(true);
-    }, 2000);
+    }, 2200);
     return () => clearTimeout(Timer);
   }, []);
 
   const LoadingUI = (
-    <div className="d-flex flex-column align-items-center justify-content-center h-100">
+    <div className="d-flex flex-column align-items-center justify-content-center h-100 text-center">
       <RingLoader color="blue" size={100} />
       <h3 className="pt-4">Just Hang on, it's cooking something...</h3>
     </div>
