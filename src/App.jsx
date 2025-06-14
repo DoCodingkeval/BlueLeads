@@ -32,7 +32,7 @@ function App() {
     <>
       {isLoading ? (
         <main>
-          <Suspense fallback={<div>Error...</div>}>
+          <Suspense fallback={<div></div>}>
             <Nav />
             <Hero />
             <Service />
