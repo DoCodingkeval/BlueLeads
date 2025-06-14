@@ -14,9 +14,9 @@ const Hero = () => {
   };
   return (
     <>
-      <section className="heroSection padding">
+      <section className="heroSection padding" id="home">
         <div className="container text-center">
-          <div className="row align-items-center mt-5">
+          <div className="row align-items-center mt-3">
             <motion.div
               variants={divVariant}
               initial="hidden"
@@ -33,18 +33,18 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="mt-md-3 text-lg-start text-gray">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                ipsum suspendisse ultrices gravi.
+                Reach the right customers through targeted strategies that drive
+                engagement and sales. From SEO to paid ads, we bring you leads
+                that matter — so you can grow faster, smarter.
               </p>
               <motion.a
                 whileHover={{
                   scale: 1.08,
                 }}
                 href="#"
-                className="btn btn-primary link mt-2 mt-md-3 mx-auto mx-lg-0"
+                className="btn btn-primary link mt-2 mt-md-3 mx-auto mx-lg-0 fw-bold"
               >
-                Contact Us
+                Let's Talk
               </motion.a>
             </motion.div>
             <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">

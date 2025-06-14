@@ -3,7 +3,7 @@ import phone from "../assets/phone.gif";
 const Showcase = () => {
   return (
     <section className="steps-section py-5" id="process">
-      <div className="container mt-5 mb-4 mb-md-0 mb-lg-0">
+      <div className="container mb-4 mb-md-0 mb-lg-0">
         <div className="row row-cols-lg-2 row-cols-1 text-white p-3 p-md-0">
           <div className="col">
             <img

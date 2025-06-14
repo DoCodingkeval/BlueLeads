@@ -32,7 +32,7 @@ sub {
 }
 
 a {
-  font-size: 1.2rem !important;
+  font-size: 1.1rem !important;
   letter-spacing: 0.05rem;
   word-spacing: 0.1rem;
   text-decoration: none;
@@ -76,7 +76,7 @@ h5 {
 }
 
 .padding {
-  padding: 4rem 2rem;
+  padding: 7rem 2rem;
 }
 
 .link {
@@ -242,7 +242,7 @@ h5 {
   padding-top: 0.8rem;
 }
 .testimonial-section .card {
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .testimonial-section .card:hover {
   background-color: #fff !important;
@@ -308,17 +308,19 @@ footer {
     font-size: 0.7rem !important;
   }
   .padding {
-    padding: 2rem;
+    padding: 3rem 1.5rem;
   }
   .heroSection {
     min-height: 100vh;
   }
   .heroSection h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .heroSection p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    letter-spacing: normal;
     line-height: normal;
+    margin-top: 1rem;
   }
   .heroSection video {
     width: 18rem;
@@ -344,7 +346,7 @@ footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: #1089ff;
+  background-color: #29a9fd;
   padding: 0.6rem 0.7rem;
   font-size: 1.2rem;
   cursor: pointer;

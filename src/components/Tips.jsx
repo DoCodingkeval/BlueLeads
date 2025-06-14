@@ -7,7 +7,7 @@ import wordpress from "../assets/wordpress.mp4";
 
 const Tips = () => {
   return (
-    <section className="tips-section padding">
+    <section className="tips-section padding" id="insights">
       <div className="container">
         <h1 className="cmn-heading text-center text-capitalize">
           Tips and Tricks From <br /> Our Exparts

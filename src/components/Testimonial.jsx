@@ -12,11 +12,12 @@ import user6 from "../assets/user-6.jpg";
 import user7 from "../assets/user-7.jpg";
 import user8 from "../assets/user-8.jpg";
 import { RiStarSFill, RiStarLine, RiStarHalfFill, RiStarHalfLine } from "react-icons/ri";
+
 const Testimonial = () => {
   return (
-    <section className="testimonial-section padding">
+    <section className="testimonial-section padding" id="testimonials">
       <div className="container">
-        <h1 className="cmn-heading text-center text-capitalize text-white mb-5">
+        <h1 className="cmn-heading text-center text-capitalize text-white mt-3 mb-5 mb-md-0">
           What client say <br /> about us
         </h1>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">

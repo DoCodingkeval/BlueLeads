@@ -89,7 +89,7 @@ const Nav = () => {
                       className="nav-item"
                       variants={itemVariants}
                     >
-                      <a href="#" className="nav-link">
+                      <a href={`#${item.toLowerCase()}`} className="nav-link">
                         {item}
                       </a>
                     </motion.li>
@@ -129,12 +129,12 @@ const Nav = () => {
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                          <a className="dropdown-item" href="#testimonials">
                             Testimonials
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                          <a className="dropdown-item" href="#insights">
                             Insights
                           </a>
                         </li>

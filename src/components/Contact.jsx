@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="contact-section padding text-white">
+    <section className="contact-section padding text-white" id="contact">
       <div className="custom-shape-divider-top-1749722384">
         <svg
           data-name="Layer 1"
@@ -16,8 +16,8 @@ const Contact = () => {
           ></path>
         </svg>
       </div>
-      <div className="container mt-5 pt-5">
-        <h1 className="cmn-heading text-center">Contact Us</h1>
+      <div className="container pt-2">
+        <h1 className="cmn-heading text-center pt-5 pt-md-0">Contact Us</h1>
         <hr className="w-25 mx-auto" />
         <div className="container d-flex justify-content-center mt-5 py-4">
           <div className="form-section col-lg-6">
