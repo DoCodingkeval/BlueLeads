@@ -54,7 +54,7 @@ const Hero = () => {
                 // transition={{
                 //   duration: 0.6,
                 // }}
-                src={herovid}
+                src="/BlueLeads/hero.mp4"
                 autoPlay
                 loop
                 muted
