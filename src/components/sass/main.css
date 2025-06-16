@@ -335,6 +335,9 @@ footer {
   .online-section p {
     font-size: 0.9rem;
   }
+  .online-section .mini-padding {
+    padding-top: 0.5rem !important;
+  }
   .testimonial-section .mySwiper {
     width: 100%;
     max-width: 76vw;
