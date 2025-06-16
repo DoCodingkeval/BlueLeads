@@ -18,8 +18,7 @@ const Nav = () => {
   };
 
   const [isopen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => setIsOpen(!isopen);
+  const toggleDropdown = ()=> setIsOpen(!isopen);
 
   const navItems = [
     "Home",

@@ -1,5 +1,7 @@
+import { inView } from "motion";
 import herovid from "../assets/hero.mp4";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
 
 const Hero = () => {
   const videoVariants = {
@@ -11,9 +13,13 @@ const Hero = () => {
     hidden: { opacity: 0, y: -200 },
     show: { opacity: 1, y: 0 },
   };
+  
   return (
     <>
-      <section className="heroSection padding" id="home">
+      <motion.section
+        className="heroSection padding"
+        id="home"
+      >
         <div className="container text-center">
           <div className="row align-items-center mt-3">
             <motion.div
@@ -79,7 +85,7 @@ const Hero = () => {
             ></path>
           </svg>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };

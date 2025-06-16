@@ -1,27 +1,58 @@
 import link from "../assets/link.gif";
 import speaker from "../assets/speaker.gif";
 import seo from "../assets/seo.gif";
-import {
-  RiArrowDownBoxFill,
-  RiArrowRightBoxLine,
-  RiArrowRightCircleLine,
-  RiArrowRightLine,
-} from "react-icons/ri";
+import { RiArrowRightLine } from "react-icons/ri";
+import { motion } from "motion/react";
+import { useInView } from "react-intersection-observer";
+const Service = ({ children, direction = "up", delay = 0 }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
-const Service = () => {
+  const variants = {
+    hidden: {
+      opacity: 0,
+      y: direction === "up" ? 300 : direction === "down" ? -50 : 0,
+      x: direction === "left" ? 50 : direction === "right" ? -50 : 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        delay,
+      },
+    },
+  };
+
   return (
     <>
       <section className="service-section padding py-5 mt-5" id="solutions">
-        <div className="container mt-5 mb-5 text-center">
+        <motion.div
+          ref={ref}
+          variants={variants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="container mt-5 mb-5 text-center"
+        >
+          {children}
           <h1 className="cmn-heading">
             what we will do for <br /> your business
             <hr className="w-25 mx-auto" />
           </h1>
-          <div className="row row-cols-1 row-cols-lg-3 mt-4 g-5 d-flex align-items-center justify-content-center">
-            <div className="col">
-              <div
-                className="card border-0 card-odd"
-              >
+          <div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="row row-cols-1 row-cols-lg-3 mt-4 g-5 d-flex align-items-center justify-content-center"
+          >
+            <div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="col"
+            >
+              <div className="card border-0 card-odd">
                 <img
                   src={link}
                   loading="lazy"
@@ -43,9 +74,7 @@ const Service = () => {
               </div>
             </div>
             <div className="col">
-              <div
-                className="card border-0 shadow-lg"
-              >
+              <div className="card border-0 shadow-lg">
                 <img
                   src={speaker}
                   loading="lazy"
@@ -67,10 +96,13 @@ const Service = () => {
               </div>
             </div>
             <div className="col">
-              <div
-                className="card border-0 card-odd"
-              >
-                <img src={seo} loading="lazy" className="pt-3 img-fluid w-50 mx-auto" alt="seo img" />
+              <div className="card border-0 card-odd">
+                <img
+                  src={seo}
+                  loading="lazy"
+                  className="pt-3 img-fluid w-50 mx-auto"
+                  alt="seo img"
+                />
                 <div className="card-body">
                   <h5 className="card-title pt-2 pt-lg-0">On Page SEO</h5>
                   <p className="card-text">
@@ -86,7 +118,7 @@ const Service = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
