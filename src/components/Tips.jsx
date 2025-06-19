@@ -14,7 +14,7 @@ const Tips = () => {
           <hr className="w-25 mx-auto" />
         </h1>
         <div className="d-flex mt-5 py-4">
-          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-5">
+          <div className="row row-cols-1 row-cols-lg-2 g-5">
             <div className="col">
               <div className="card">
                 <div className="row g-md-5">

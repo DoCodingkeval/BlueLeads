@@ -26,7 +26,11 @@ const Testimonial = () => {
           What client say <br /> about us
           <hr className="w-25 mx-auto" />
         </h1>
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <Swiper
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper mt-md-5 pt-md-5 mt-lg-0 pt-lg-0"
+        >
           <SwiperSlide>
             <div className="container p-lg-5">
               <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
