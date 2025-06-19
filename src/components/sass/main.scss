@@ -65,7 +65,7 @@ h5 {
   background-color: $bg-white;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(149, 157, 165, .8);
+  background: rgba(149, 157, 165, 0.8);
   border-radius: 1rem;
   border: 0.2rem solid transparent;
   background-clip: content-box;
@@ -139,9 +139,9 @@ h5 {
       li a {
         color: $text-white;
         font-weight: 600;
-        transition: color .4s ease-in-out;
+        transition: color 0.4s ease-in-out;
       }
-      li a:hover{
+      li a:hover {
         background: transparent;
         color: #0b1320;
       }
@@ -216,7 +216,6 @@ h5 {
 
     img {
       width: 40%;
-      margin-left: 1rem;
     }
   }
   h5 {
@@ -242,13 +241,9 @@ h5 {
   .card h5 {
     font-size: 1.3rem;
   }
-  .card p {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
   .card img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     padding: 0.3rem;
     border: 4px solid rgba(255, 255, 255, 0.2);
@@ -278,6 +273,7 @@ h5 {
 .tips-section {
   .card {
     color: $text-white;
+  
   }
   .card p {
     line-height: 1.8;
@@ -313,7 +309,7 @@ footer {
     .center {
       align-items: center !important;
     }
-    video{
+    video {
       width: 70%;
     }
   }
@@ -321,7 +317,7 @@ footer {
 @media (min-width: 900px) {
   .heroSection {
     height: 80vh;
-    & p{
+    & p {
       width: 85%;
     }
     .order-0 {
@@ -331,9 +327,9 @@ footer {
       order: 0 !important;
     }
   }
-  .contact-section{
-    .form-section{
-    padding: 5rem 4rem;
+  .contact-section {
+    .form-section {
+      padding: 5rem 4rem;
     }
   }
 }

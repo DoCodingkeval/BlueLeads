@@ -8,7 +8,8 @@ const Showcase = () => {
           <div className="col">
             <img
               src={marketing}
-              loading="lazy"
+              loading="eager"
+              decoding="async"
               className="img-fluid w-75 mx-auto d-block"
               alt="phone img"
             />

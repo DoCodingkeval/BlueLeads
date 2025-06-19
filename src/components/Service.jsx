@@ -55,7 +55,8 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
               <div className="card border-0">
                 <img
                   src={link}
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                   className="pt-3 img-fluid w-50 mx-auto"
                   alt="link img"
                 />
@@ -77,7 +78,8 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
               <div className="card border-0 shadow-lg">
                 <img
                   src={speaker}
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                   className="pt-3 img-fluid w-50 mx-auto"
                   alt="content img"
                 />
@@ -99,7 +101,8 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
               <div className="card border-0">
                 <img
                   src={seo}
-                  loading="lazy"
+                  loading="eager"
+                  decoding="async"
                   className="pt-3 img-fluid w-50 mx-auto"
                   alt="seo img"
                 />

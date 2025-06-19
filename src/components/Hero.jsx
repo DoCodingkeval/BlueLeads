@@ -1,14 +1,9 @@
 import { inView } from "motion";
-import seo from "../assets/seo.mp4";
+import seo from "../assets/seo2.mp4";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 const Hero = () => {
-  const videoVariants = {
-    hidden: { opacity: 0, x: 500 },
-    show: { opacity: 1, x: 0 },
-  };
-
   const divVariant = {
     hidden: { opacity: 0, y: -200 },
     show: { opacity: 1, y: 0 },
@@ -47,13 +42,7 @@ const Hero = () => {
               </a>
             </motion.div>
             <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">
-              <motion.video
-                initial="hidden"
-                variants={videoVariants}
-                animate="show"
-                transition={{
-                  duration: 0.6,
-                }}
+              <video
                 src={seo}
                 preload="none"
                 autoPlay
@@ -62,7 +51,7 @@ const Hero = () => {
                 className="img-fluid rounded-4"
               >
                 Your browser does not support the video tag.
-              </motion.video>
+              </video>
             </div>
           </div>
         </motion.section>

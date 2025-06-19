@@ -234,7 +234,6 @@ h5 {
 }
 .online-section .content img {
   width: 40%;
-  margin-left: 1rem;
 }
 .online-section h5 {
   font-size: 1.2rem;
@@ -259,13 +258,9 @@ h5 {
 .testimonial-section .card h5 {
   font-size: 1.3rem;
 }
-.testimonial-section .card p {
-  font-size: 1rem;
-  padding: 0 1rem;
-}
 .testimonial-section .card img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   padding: 0.3rem;

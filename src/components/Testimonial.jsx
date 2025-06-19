@@ -2,15 +2,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import user from "../assets/user.jpeg";
-import user1 from "../assets/user-1.jpg";
-import user2 from "../assets/user-2.jpg";
-import user3 from "../assets/user-3.jpg";
-import user4 from "../assets/user-4.jpg";
-import user5 from "../assets/user-5.jpg";
-import user6 from "../assets/user-6.jpg";
-import user7 from "../assets/user-7.jpg";
-import user8 from "../assets/user-8.jpg";
+import user1 from "../assets/user-1.png";
+import user2 from "../assets/user-2.png";
+import user3 from "../assets/user-3.png";
+import user4 from "../assets/user-4.png";
+import user5 from "../assets/user-5.png";
+import user6 from "../assets/user-6.png";
+import user7 from "../assets/user-7.png";
+import user8 from "../assets/user-8.png";
+import user9 from "../assets/user-9.png";
 import {
   RiStarSFill,
   RiStarLine,
@@ -33,7 +33,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center text-white">
                     <img
-                      src={user}
+                      src={user1}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto"
                       alt="user"
@@ -58,7 +59,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center text-white">
                     <img
-                      src={user1}
+                      src={user2}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto"
                       alt="user"
@@ -83,7 +85,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img
-                      src={user2}
+                      src={user3}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto rounded-2"
                       alt="user"
@@ -114,7 +117,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img
-                      src={user3}
+                      src={user4}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto rounded-2"
                       alt="user"
@@ -138,7 +142,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img
-                      src={user4}
+                      src={user5}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto rounded-2"
                       alt="user"
@@ -162,7 +167,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img
-                      src={user5}
+                      src={user6}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto rounded-2"
                       alt="user"
@@ -192,7 +198,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img
-                      src={user6}
+                      src={user7}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto rounded-2"
                       alt="user"
@@ -216,7 +223,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img
-                      src={user7}
+                      src={user8}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto rounded-2"
                       alt="user"
@@ -240,7 +248,8 @@ const Testimonial = () => {
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img
-                      src={user8}
+                      src={user9}
+                      fetchPriority="high"
                       loading="lazy"
                       className="img-fluid mx-auto rounded-2"
                       alt="user"

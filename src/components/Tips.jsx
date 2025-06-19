@@ -3,6 +3,7 @@ import webdev from "../assets/webdev.png";
 import freelancing from "../assets/freelancing.png";
 import graphicdesigner from "../assets/designer.png";
 import wordpress from "../assets/wordpress.png";
+import { useState } from "react";
 
 const Tips = () => {
   return (
@@ -18,7 +19,13 @@ const Tips = () => {
               <div className="card">
                 <div className="row g-md-5">
                   <div className="col-lg-12 text-center">
-                    <img src={webdev} loading="lazy" className="img-fluid pt-3" alt="" />
+                    <img
+                      src={webdev}
+                      loading="eager"
+                      decoding="async"
+                      className="img-fluid pt-3 "
+                      alt="webdev img"
+                    />
                   </div>
                   <div className="col-lg-12">
                     <div className="card-body">
@@ -48,7 +55,13 @@ const Tips = () => {
               <div className="card">
                 <div className="row g-md-5">
                   <div className="col-lg-12 text-center">
-                    <img src={freelancing} loading="lazy" className="img-fluid pt-5" alt="" />
+                    <img
+                      src={freelancing}
+                      loading="eager"
+                      decoding="async"
+                      className="img-fluid pt-5"
+                      alt="freelancing img"
+                    />
                   </div>
                   <div className="col-lg-12">
                     <div className="card-body">
@@ -78,7 +91,13 @@ const Tips = () => {
               <div className="card p-2">
                 <div className="row g-md-3">
                   <div className="col-lg-12 text-center">
-                    <img src={graphicdesigner} loading="lazy" className="img-fluid" alt="" />
+                    <img
+                      src={graphicdesigner}
+                      loading="eager"
+                      decoding="async"
+                      className="img-fluid"
+                      alt="designer img"
+                    />
                   </div>
                   <div className="col-lg-12">
                     <div className="card-body">
@@ -107,7 +126,13 @@ const Tips = () => {
               <div className="card p-2">
                 <div className="row g-md-3">
                   <div className="col-lg-12 text-center">
-                    <img src={wordpress} loading="lazy" className="img-fluid" alt="" />
+                    <img
+                      src={wordpress}
+                      loading="eager"
+                      decoding="async"
+                      className="img-fluid"
+                      alt="wordpress img"
+                    />
                   </div>
                   <div className="col-lg-12">
                     <div className="card-body">

@@ -16,9 +16,9 @@ const Modeservice = () => {
             <div className="content d-flex align-items-center justify-content-center px-lg-3 py-4 shadow">
               <img
                 src={socialmedia}
-                loading="lazy"
-                className="img-fluid d-md-block d-none"
-                style={{ width: "13rem" }}
+                loading="eager"
+                decoding="async"
+                className="img-fluid d-md-block d-none skeleton"
                 alt="phone img"
               />
               <div className="mini-padding">
@@ -34,7 +34,13 @@ const Modeservice = () => {
           </div>
           <div className="col">
             <div className="content d-flex align-items-center justify-content-center py-4 shadow">
-              <img src={influence} loading="lazy" className="img-fluid d-md-block d-none" alt="" />
+              <img
+                src={influence}
+                loading="eager"
+                decoding="async"
+                className="img-fluid d-md-block d-none"
+                alt="influence img"
+              />
               <div className="mini-padding">
                 <h5 className="mb-3 fw-bolder">Influencer Marketing</h5>
                 <p>
@@ -48,7 +54,13 @@ const Modeservice = () => {
           </div>
           <div className="col">
             <div className="content d-flex align-items-center justify-content-center px-lg-3 py-4 shadow">
-              <img src={content} loading="lazy" className="img-fluid d-md-block d-none" alt="" />
+              <img
+                src={content}
+                loading="eager"
+                decoding="async"
+                className="img-fluid d-md-block d-none"
+                alt="content img"
+              />
               <div className="mini-padding">
                 <h5 className="mb-3 fw-bolder">Content Marketing</h5>
                 <p>
@@ -61,7 +73,13 @@ const Modeservice = () => {
           </div>
           <div className="col">
             <div className="content d-flex align-items-center justify-content-center px-lg-3 py-4 shadow">
-              <img src={referral} loading="lazy" className="img-fluid d-md-block d-none" alt="" />
+              <img
+                src={referral}
+                loading="eager"
+                decoding="async"
+                className="img-fluid d-md-block d-none"
+                alt="referral img"
+              />
               <div className="mini-padding">
                 <h5 className="mb-3 fw-bolder">Referral Programs</h5>
                 <p>
