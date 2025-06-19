@@ -22,7 +22,10 @@ function App() {
   }, []);
 
   const LoadingUI = (
-    <div className="d-flex flex-column align-items-center justify-content-center h-100 text-center">
+    <div
+      className="d-flex flex-column align-items-center justify-content-center text-center"
+      style={{ height: "100vh" }}
+    >
       <RingLoader color="blue" size={100} />
       <h3 className="pt-4">Just Hang on, it's cooking something...</h3>
     </div>

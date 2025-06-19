@@ -29,9 +29,9 @@ const Testimonial = () => {
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           <SwiperSlide>
             <div className="container p-lg-5">
-              <div className="row row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
+              <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
                 <div className="col p-lg-5">
-                  <div className="card py-3 text-center  text-white">
+                  <div className="card py-3 text-center text-white">
                     <img
                       src={user}
                       loading="lazy"
@@ -56,7 +56,7 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <div className="col p-lg-5">
-                  <div className="card py-3 text-center  text-white">
+                  <div className="card py-3 text-center text-white">
                     <img
                       src={user1}
                       loading="lazy"
@@ -110,7 +110,7 @@ const Testimonial = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="container p-lg-5">
-              <div className="row row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
+              <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img
@@ -188,7 +188,7 @@ const Testimonial = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="container p-lg-5">
-              <div className="row row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
+              <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
                 <div className="col p-lg-5">
                   <div className="card py-3 text-center  text-white">
                     <img

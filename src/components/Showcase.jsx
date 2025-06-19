@@ -13,7 +13,7 @@ const Showcase = () => {
               alt="phone img"
             />
           </div>
-          <div className="col mt-2 mt-lg-5">
+          <div className="col px-md-5 mt-2 mt-lg-5">
             <h1 className="fw-bold">
               Steps to Build A <br /> Successful Digital Product{" "}
             </h1>

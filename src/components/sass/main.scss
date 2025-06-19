@@ -159,7 +159,6 @@ h5 {
     padding-right: 0.4rem;
   }
   & p {
-    width: 85%;
     line-height: 1.5rem;
     font-size: 1rem;
     color: $para-color !important;
@@ -296,7 +295,7 @@ h5 {
     width: 70%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
-    padding: 5rem 4rem;
+    padding: 3rem 2rem;
     border-radius: 1rem;
   }
 }
@@ -306,6 +305,7 @@ footer {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     border-radius: 1rem;
+    width: 95%;
   }
 }
 @media (max-width: 768px) {
@@ -313,16 +313,27 @@ footer {
     .center {
       align-items: center !important;
     }
+    video{
+      width: 70%;
+    }
   }
 }
 @media (min-width: 900px) {
   .heroSection {
     height: 80vh;
+    & p{
+      width: 85%;
+    }
     .order-0 {
       order: 1 !important;
     }
     .order-1 {
       order: 0 !important;
+    }
+  }
+  .contact-section{
+    .form-section{
+    padding: 5rem 4rem;
     }
   }
 }
@@ -338,7 +349,6 @@ footer {
     padding: 3rem 1.5rem;
   }
   .heroSection {
-    min-height: 100vh;
     h1 {
       font-size: 1.8rem;
     }
