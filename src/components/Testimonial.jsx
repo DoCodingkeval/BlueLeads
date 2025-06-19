@@ -11,25 +11,33 @@ import user5 from "../assets/user-5.jpg";
 import user6 from "../assets/user-6.jpg";
 import user7 from "../assets/user-7.jpg";
 import user8 from "../assets/user-8.jpg";
-import { RiStarSFill, RiStarLine, RiStarHalfFill, RiStarHalfLine } from "react-icons/ri";
+import {
+  RiStarSFill,
+  RiStarLine,
+  RiStarHalfFill,
+  RiStarHalfLine,
+} from "react-icons/ri";
 
 const Testimonial = () => {
   return (
-    <section className="testimonial-section padding" id="testimonials">
-      <div className="container">
+    <div className="container">
+      <section className="testimonial-section padding" id="testimonials">
         <h1 className="cmn-heading text-center text-capitalize text-white mt-3 mb-5 mb-md-0">
           What client say <br /> about us
+          <hr className="w-25 mx-auto" />
         </h1>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           <SwiperSlide>
             <div className="container p-lg-5">
               <div className="row row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
-                    <img src={user} className="img-fluid mx-4" alt="user" />
+                  <div className="card py-3 text-center  text-white">
+                    <img
+                      src={user}
+                      loading="lazy"
+                      className="img-fluid mx-auto"
+                      alt="user"
+                    />
                     <div className="card-body">
                       <h5 className="card-title">Angelina Thapa</h5>
                       <p className="card-text mt-3">
@@ -48,11 +56,13 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
-                    <img src={user1} loading="lazy" className="img-fluid mx-4" alt="user" />
+                  <div className="card py-3 text-center  text-white">
+                    <img
+                      src={user1}
+                      loading="lazy"
+                      className="img-fluid mx-auto"
+                      alt="user"
+                    />
                     <div className="card-body">
                       <h5 className="card-title">Ravi Sharma</h5>
                       <p className="card-text mt-3">
@@ -71,14 +81,11 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
+                  <div className="card py-3 text-center  text-white">
                     <img
                       src={user2}
                       loading="lazy"
-                      className="img-fluid mx-4 rounded-2"
+                      className="img-fluid mx-auto rounded-2"
                       alt="user"
                     />
                     <div className="card-body">
@@ -105,14 +112,11 @@ const Testimonial = () => {
             <div className="container p-lg-5">
               <div className="row row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
+                  <div className="card py-3 text-center  text-white">
                     <img
                       src={user3}
                       loading="lazy"
-                      className="img-fluid mx-4 rounded-2"
+                      className="img-fluid mx-auto rounded-2"
                       alt="user"
                     />
                     <div className="card-body">
@@ -132,14 +136,11 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
+                  <div className="card py-3 text-center  text-white">
                     <img
                       src={user4}
                       loading="lazy"
-                      className="img-fluid mx-4 rounded-2"
+                      className="img-fluid mx-auto rounded-2"
                       alt="user"
                     />
                     <div className="card-body">
@@ -159,14 +160,11 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
+                  <div className="card py-3 text-center  text-white">
                     <img
                       src={user5}
                       loading="lazy"
-                      className="img-fluid mx-4 rounded-2"
+                      className="img-fluid mx-auto rounded-2"
                       alt="user"
                     />
                     <div className="card-body">
@@ -192,14 +190,11 @@ const Testimonial = () => {
             <div className="container p-lg-5">
               <div className="row row-cols-md-2 row-cols-lg-3 d-flex align-items-center justify-content-center g-5">
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
+                  <div className="card py-3 text-center  text-white">
                     <img
                       src={user6}
                       loading="lazy"
-                      className="img-fluid mx-4 rounded-2"
+                      className="img-fluid mx-auto rounded-2"
                       alt="user"
                     />
                     <div className="card-body">
@@ -219,14 +214,11 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
+                  <div className="card py-3 text-center  text-white">
                     <img
                       src={user7}
                       loading="lazy"
-                      className="img-fluid mx-4 rounded-2"
+                      className="img-fluid mx-auto rounded-2"
                       alt="user"
                     />
                     <div className="card-body">
@@ -246,14 +238,11 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <div className="col p-lg-5">
-                  <div
-                    className="card py-3 text-center bg-dark text-white"
-                    style={{ width: "18rem" }}
-                  >
+                  <div className="card py-3 text-center  text-white">
                     <img
                       src={user8}
                       loading="lazy"
-                      className="img-fluid mx-4 rounded-2"
+                      className="img-fluid mx-auto rounded-2"
                       alt="user"
                     />
                     <div className="card-body">
@@ -276,8 +265,8 @@ const Testimonial = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

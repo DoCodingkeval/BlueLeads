@@ -3,17 +3,15 @@ import { RiInstagramLine, RiTwitterLine, RiWhatsappLine } from "react-icons/ri";
 const Footer = () => {
   return (
     <footer>
-      <div className="container py-5 bg-dark text-white">
+      <div className="container py-5 text-white text-center">
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 align-items-center mx-5">
+          <div className="col mb-3">📞 (+91) 98765 43210</div>
           <div className="col mb-3">
-              📞 (+91) 98765 43210
-          </div>
-          <div className="col mb-3">
-              <a href="#">✉️ support@blueleads.com</a>
+            <a href="#">✉️ support@blueleads.com</a>
           </div>
           <div className="col mt-md-4">
-              🏢 405, BlueLeads Building, Tech Street, Mumbai, Maharashtra,
-              India – 400001
+            🏢 405, BlueLeads Building, Tech Street, Mumbai, Maharashtra, India
+            – 400001
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { inView } from "motion";
-import herovid from "../assets/hero.mp4";
+import seo from "../assets/seo.mp4";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
@@ -13,15 +13,12 @@ const Hero = () => {
     hidden: { opacity: 0, y: -200 },
     show: { opacity: 1, y: 0 },
   };
-  
+
   return (
     <>
-      <motion.section
-        className="heroSection padding"
-        id="home"
-      >
-        <div className="container text-center">
-          <div className="row align-items-center mt-3">
+      <div className="container text-center">
+        <motion.section className="heroSection padding" id="home">
+          <div className="row align-items-center" style={{ height: "60vh" }}>
             <motion.div
               variants={divVariant}
               initial="hidden"
@@ -42,15 +39,12 @@ const Hero = () => {
                 engagement and sales. From SEO to paid ads, we bring you leads
                 that matter — so you can grow faster, smarter.
               </p>
-              <motion.a
-                whileHover={{
-                  scale: 1.08,
-                }}
+              <a
                 href="#"
-                className="btn btn-primary link mt-2 mt-md-3 mx-auto mx-lg-0 fw-bold"
+                className="btn link mt-2 mt-md-3 mx-auto mx-lg-0 fw-bold"
               >
                 Let's Talk
-              </motion.a>
+              </a>
             </motion.div>
             <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">
               <motion.video
@@ -60,32 +54,19 @@ const Hero = () => {
                 transition={{
                   duration: 0.6,
                 }}
-                src={herovid}
+                src={seo}
                 preload="none"
                 autoPlay
                 loop
                 muted
-                className="img-fluid rounded-5 rounded-lg-5 p-lg-0"
+                className="img-fluid rounded-4"
               >
                 Your browser does not support the video tag.
               </motion.video>
             </div>
           </div>
-        </div>
-        <div className="custom-shape-divider-bottom-1749627964">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              className="shape-fill"
-            ></path>
-          </svg>
-        </div>
-      </motion.section>
+        </motion.section>
+      </div>
     </>
   );
 };

@@ -1,32 +1,24 @@
-import React from "react";
 import { RiBookOpenFill } from "react-icons/ri";
-import webdev from "../assets/webdev.mp4";
-import freelancing from "../assets/freelancing.mp4";
-import graphicdesigner from "../assets/graphicdesigner.mp4";
-import wordpress from "../assets/wordpress.mp4";
+import webdev from "../assets/webdev.png";
+import freelancing from "../assets/freelancing.png";
+import graphicdesigner from "../assets/designer.png";
+import wordpress from "../assets/wordpress.png";
 
 const Tips = () => {
   return (
-    <section className="tips-section padding" id="insights">
-      <div className="container">
+    <div className="container">
+      <section className="tips-section padding" id="insights">
         <h1 className="cmn-heading text-center text-capitalize">
-          Tips and Tricks From <br /> Our Exparts
+          Tips and Tricks From <br /> Our Experts
           <hr className="w-25 mx-auto" />
         </h1>
         <div className="d-flex mt-5 py-4">
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-5">
             <div className="col">
-              <div className="card p-2">
+              <div className="card">
                 <div className="row g-md-5">
-                  <div className="col-lg-12">
-                    <video
-                      src={webdev}
-                      preload="none"
-                      autoPlay
-                      loop
-                      muted
-                      className="img-fluid mx-auto d-md-block d-none"
-                    ></video>
+                  <div className="col-lg-12 text-center">
+                    <img src={webdev} loading="lazy" className="img-fluid pt-3" alt="" />
                   </div>
                   <div className="col-lg-12">
                     <div className="card-body">
@@ -53,17 +45,10 @@ const Tips = () => {
               </div>
             </div>
             <div className="col">
-              <div className="card p-2">
+              <div className="card">
                 <div className="row g-md-5">
-                  <div className="col-lg-12">
-                    <video
-                      src={freelancing}
-                      preload="none"
-                      autoPlay
-                      loop
-                      muted
-                      className="img-fluid mx-auto d-md-block d-none"
-                    ></video>
+                  <div className="col-lg-12 text-center">
+                    <img src={freelancing} loading="lazy" className="img-fluid pt-5" alt="" />
                   </div>
                   <div className="col-lg-12">
                     <div className="card-body">
@@ -92,15 +77,8 @@ const Tips = () => {
             <div className="col">
               <div className="card p-2">
                 <div className="row g-md-3">
-                  <div className="col-lg-12">
-                    <video
-                      src={graphicdesigner}
-                      preload="none"
-                      autoPlay
-                      loop
-                      muted
-                      className="img-fluid mx-auto d-md-block d-none"
-                    ></video>
+                  <div className="col-lg-12 text-center">
+                    <img src={graphicdesigner} loading="lazy" className="img-fluid" alt="" />
                   </div>
                   <div className="col-lg-12">
                     <div className="card-body">
@@ -128,15 +106,8 @@ const Tips = () => {
             <div className="col">
               <div className="card p-2">
                 <div className="row g-md-3">
-                  <div className="col-lg-12">
-                    <video
-                      src={wordpress}
-                      preload="none"
-                      autoPlay
-                      loop
-                      muted
-                      className="img-fluid mx-auto d-md-block d-none"
-                    ></video>
+                  <div className="col-lg-12 text-center">
+                    <img src={wordpress} loading="lazy" className="img-fluid" alt="" />
                   </div>
                   <div className="col-lg-12">
                     <div className="card-body">
@@ -163,8 +134,8 @@ const Tips = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

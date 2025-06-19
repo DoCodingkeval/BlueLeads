@@ -29,14 +29,14 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
 
   return (
     <>
-      <section className="service-section padding py-5 mt-5" id="solutions">
-        <motion.div
-          ref={ref}
-          variants={variants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="container mt-5 mb-5 text-center"
-        >
+      <motion.div
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="container py-5 mt-5 mb-5 text-center"
+      >
+        <section className="service-section padding" id="solutions">
           {children}
           <h1 className="cmn-heading">
             what we will do for <br /> your business
@@ -52,7 +52,7 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
               animate={{ opacity: 1, x: 0 }}
               className="col"
             >
-              <div className="card border-0 card-odd">
+              <div className="card border-0">
                 <img
                   src={link}
                   loading="lazy"
@@ -96,7 +96,7 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
               </div>
             </div>
             <div className="col">
-              <div className="card border-0 card-odd">
+              <div className="card border-0">
                 <img
                   src={seo}
                   loading="lazy"
@@ -118,8 +118,8 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
               </div>
             </div>
           </div>
-        </motion.div>
-      </section>
+        </section>
+      </motion.div>
     </>
   );
 };

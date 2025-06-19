@@ -9,7 +9,7 @@
 }
 * {
   margin: 0;
-  font-family: "Urbanist", serif;
+  font-family: "Poppins", serif;
 }
 html,
 body {
@@ -18,8 +18,8 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  display: grid;
-  grid-template-columns: auto 0;
+  background: linear-gradient(to bottom, #141e30, #243b55, #141e30);
+  color: $text-white;
 }
 input,
 button,
@@ -28,6 +28,12 @@ select,
 span,
 sub {
   font: inherit;
+}
+button {
+  transition: background-color 0.3s ease-in-out !important;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
 }
 a {
   font-size: 1.1rem !important;
@@ -50,17 +56,16 @@ h3,
 h4,
 h5 {
   overflow-wrap: break-word;
-  font-family: "Lexend Deca", serif;
 }
 
 ::-webkit-scrollbar {
-  width: 0.9rem;
+  width: 0.8rem;
 }
 ::-webkit-scrollbar-track {
   background-color: $bg-white;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: $primary-color;
+  background: rgba(149, 157, 165, .8);
   border-radius: 1rem;
   border: 0.2rem solid transparent;
   background-clip: content-box;
@@ -69,41 +74,82 @@ h5 {
   color: $text-gray;
 }
 .padding {
-  padding: 7rem 2rem;
+  padding: 7rem 0;
 }
 .link {
-  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   color: $text-white;
-  background-color: $primary-color;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.2rem;
   padding: 0.4rem 3rem;
+  position: relative;
+  overflow: hidden;
 }
-.navbar {
-  background-color: $bg-black;
-  position: sticky;
+.link::after {
+  position: absolute;
+  content: "";
   top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: #141e30c8;
+  border-radius: 0.5rem;
+  transition: 0.5s ease;
+  z-index: -1;
+}
+.link:hover::after {
+  border-radius: 0;
+  left: 0;
+}
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+}
+.header {
+  position: sticky;
+  top: 4%;
   z-index: 1000;
-  .container .navbar-brand span {
-    color: $text-blue;
-    font-size: 1.6rem;
-  }
+  padding: 0.6rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  .navbar {
+    .navbar-brand span {
+      color: $text-blue;
+      font-size: 1.6rem;
+    }
+    .nav-link,
+    .navbar-brand {
+      color: $text-white;
+    }
+    .navbar-toggler:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+    .nav-link:hover {
+      color: $text-blue !important;
+    }
+    .dropdown-menu {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
 
-  .container .navbar-toggler:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
-  }
-  .nav-link,
-  .navbar-brand {
-    color: $text-white !important;
-  }
-  .nav-link:hover {
-    color: $text-blue !important;
+      li a {
+        color: $text-white;
+        font-weight: 600;
+        transition: color .4s ease-in-out;
+      }
+      li a:hover{
+        background: transparent;
+        color: #0b1320;
+      }
+    }
   }
 }
 .heroSection {
   position: relative;
-  background-color: $bg-black;
-
   & h1 {
     font-size: 3.4rem;
   }
@@ -113,14 +159,10 @@ h5 {
     padding-right: 0.4rem;
   }
   & p {
+    width: 85%;
     line-height: 1.5rem;
     font-size: 1rem;
-    letter-spacing: 0.07rem;
     color: $para-color !important;
-  }
-  video {
-    width: 30rem;
-    border-radius: 1rem !important;
   }
   .order-0 {
     order: 0 !important;
@@ -129,30 +171,13 @@ h5 {
     order: 1 !important;
   }
 }
-.custom-shape-divider-bottom-1749627964 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1749627964 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 150px;
-}
-
-.custom-shape-divider-bottom-1749627964 .shape-fill {
-  fill: #ffffff;
-}
 .service-section {
   .card {
     padding: 3rem 0;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
+    color: $text-white;
+    transition: 0.3s ease-in-out;
   }
   .card h5 {
     font-size: 1.3rem;
@@ -161,38 +186,40 @@ h5 {
     font-size: 1rem;
     font-weight: 300;
   }
-  .card-odd {
-    transform: 0.2s linear;
-  }
-  .card-odd:hover {
+  .card:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !important;
   }
 }
 .cmn-heading {
   line-height: 1.4;
+  font-weight: 600;
+  font-size: 3rem;
   letter-spacing: 0.01rem;
   text-transform: capitalize;
 }
-
 .steps-section {
-  background-image: linear-gradient(
-      rgba(22, 22, 22, 0.9),
-      rgba(22, 22, 22, 0.9)
-    ),
-    url("https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
   h1 {
     font-size: 2.6rem;
   }
   p {
     font-weight: 200;
     letter-spacing: 0.01rem;
+    width: 90%;
   }
 }
 .online-section {
+  .content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+
+    img {
+      width: 40%;
+      margin-left: 1rem;
+    }
+  }
   h5 {
     font-size: 1.2rem;
   }
@@ -212,7 +239,6 @@ h5 {
 }
 .testimonial-section {
   overflow: hidden;
-  background-color: $bg-black;
 
   .card h5 {
     font-size: 1.3rem;
@@ -222,7 +248,12 @@ h5 {
     padding: 0 1rem;
   }
   .card img {
-    border-radius: 0.3rem !important;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    padding: 0.3rem;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50% !important;
   }
   .mySwiper {
     width: 100%;
@@ -239,48 +270,43 @@ h5 {
     padding-top: 0.8rem;
   }
   .card {
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
   .card:hover {
-    background-color: $bg-white !important;
-    color: $text-black !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !important;
   }
 }
 .tips-section {
+  .card {
+    color: $text-white;
+  }
   .card p {
     line-height: 1.8;
   }
-  video {
-    max-width: 100%;
-    padding-top: 2rem;
+  .col img {
+    height: 50vh;
+    object-fit: cover;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
   }
 }
+
 .contact-section {
-  position: relative;
-  background-color: $bg-black;
-
-  .custom-shape-divider-top-1749722384 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-
-  .custom-shape-divider-top-1749722384 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-  }
-
-  .custom-shape-divider-top-1749722384 .shape-fill {
-    fill: #ffffff;
+  .form-section {
+    width: 70%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 5rem 4rem;
+    border-radius: 1rem;
   }
 }
+
 footer {
-  background-color: $bg-black;
+  .container:first-child {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+  }
 }
 @media (max-width: 768px) {
   .heroSection {
@@ -338,8 +364,8 @@ footer {
     p {
       font-size: 0.9rem;
     }
-    .mini-padding{
-      padding-top: .5rem !important;
+    .mini-padding {
+      padding-top: 0.5rem !important;
     }
   }
   .testimonial-section {

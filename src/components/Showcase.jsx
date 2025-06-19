@@ -1,15 +1,15 @@
-import phone from "../assets/phone.gif";
+import marketing from "../assets/marketing.png";
 
 const Showcase = () => {
   return (
-    <section className="steps-section py-5" id="process">
-      <div className="container mb-4 mb-md-0 mb-lg-0">
+    <div className="container mb-4 mb-md-0 mb-lg-0">
+      <section className="steps-section py-5" id="process">
         <div className="row row-cols-lg-2 row-cols-1 text-white p-3 p-md-0">
           <div className="col">
             <img
-              src={phone}
+              src={marketing}
               loading="lazy"
-              className="img-fluid w-75 mx-auto mx-lg-0 d-block"
+              className="img-fluid w-75 mx-auto d-block"
               alt="phone img"
             />
           </div>
@@ -26,13 +26,13 @@ const Showcase = () => {
               proven process ensures your product is built to succeed in today’s
               digital landscape.
             </p>
-            <a href="#" className="btn btn-primary link mt-4 mx-auto">
+            <a href="#" className="btn link mt-4 mx-auto">
               Contact Us
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
