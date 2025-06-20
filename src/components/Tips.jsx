@@ -18,16 +18,16 @@ const Tips = () => {
             <div className="col">
               <div className="card">
                 <div className="row g-md-5">
-                  <div className="col-lg-12 text-center">
+                  <div className="col-lg-4">
                     <img
                       src={webdev}
                       loading="eager"
                       decoding="async"
-                      className="img-fluid pt-3 "
+                      className="img-fluid  "
                       alt="webdev img"
                     />
                   </div>
-                  <div className="col-lg-12">
+                  <div className="col-lg-8">
                     <div className="card-body">
                       <div className="text-gray d-flex justify-content-between mb-3">
                         <h6 className="d-flex">
@@ -54,16 +54,16 @@ const Tips = () => {
             <div className="col">
               <div className="card">
                 <div className="row g-md-5">
-                  <div className="col-lg-12 text-center">
+                  <div className="col-lg-4">
                     <img
                       src={freelancing}
                       loading="eager"
                       decoding="async"
-                      className="img-fluid pt-5"
+                      className="img-fluid"
                       alt="freelancing img"
                     />
                   </div>
-                  <div className="col-lg-12">
+                  <div className="col-lg-8">
                     <div className="card-body">
                       <div className="text-gray d-flex justify-content-between mb-3">
                         <h6 className="d-flex">
@@ -90,16 +90,16 @@ const Tips = () => {
             <div className="col">
               <div className="card p-2">
                 <div className="row g-md-3">
-                  <div className="col-lg-12 text-center">
+                  <div className="col-lg-4">
                     <img
                       src={graphicdesigner}
                       loading="eager"
                       decoding="async"
-                      className="img-fluid"
+                      className="img-fluid  "
                       alt="designer img"
                     />
                   </div>
-                  <div className="col-lg-12">
+                  <div className="col-lg-8">
                     <div className="card-body">
                       <div className="text-gray d-flex justify-content-between mb-3">
                         <h6 className="d-flex">
@@ -125,16 +125,16 @@ const Tips = () => {
             <div className="col">
               <div className="card p-2">
                 <div className="row g-md-3">
-                  <div className="col-lg-12 text-center">
+                  <div className="col-lg-4">
                     <img
                       src={wordpress}
                       loading="eager"
                       decoding="async"
-                      className="img-fluid"
+                      className="img-fluid  "
                       alt="wordpress img"
                     />
                   </div>
-                  <div className="col-lg-12">
+                  <div className="col-lg-8">
                     <div className="card-body">
                       <div className="text-gray d-flex justify-content-between mb-3">
                         <h6 className="d-flex">

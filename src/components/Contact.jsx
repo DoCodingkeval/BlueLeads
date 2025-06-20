@@ -7,7 +7,7 @@ const Contact = () => {
         <h1 className="cmn-heading text-center pt-5 pt-md-0">Contact Us</h1>
         <hr className="w-25 mx-auto" />
         <div className="container d-flex justify-content-center mt-5 py-4">
-          <div className="form-section col col-lg-6">
+          <div className="form-section col col-lg-6 mb-5">
             <form>
               <div className="row">
                 <div className="col mb-3">

@@ -1,7 +1,5 @@
-import { inView } from "motion";
-import seo from "../assets/seo2.mp4";
+import hero from "../assets/hero.mp4";
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
 
 const Hero = () => {
   const divVariant = {
@@ -43,7 +41,7 @@ const Hero = () => {
             </motion.div>
             <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">
               <video
-                src={seo}
+                src={hero}
                 preload="none"
                 autoPlay
                 loop

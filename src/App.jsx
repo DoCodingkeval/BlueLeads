@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import { RingLoader } from "react-spinners";
 const Hero = lazy(() => import("./components/Hero"));
 const Nav = lazy(() => import("./components/Nav"));
@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const Timer = setTimeout(() => {
       setLoading(true);
-    }, 2200);
+    }, 1500);
     return () => clearTimeout(Timer);
   }, []);
 
@@ -35,18 +35,16 @@ function App() {
     <>
       {isLoading ? (
         <main>
-          <Suspense fallback={<div></div>}>
-            <Nav />
-            <Hero />
-            <Service />
-            <Showcase />
-            <Modeservice />
-            <Testimonial />
-            <Tips />
-            <Contact />
-            <GotoTop />
-            <Footer />
-          </Suspense>
+          <Nav />
+          <Hero />
+          <Service />
+          <Showcase />
+          <Modeservice />
+          <Testimonial />
+          <Tips />
+          <Contact />
+          <GotoTop />
+          <Footer />
         </main>
       ) : (
         LoadingUI
