@@ -103,8 +103,7 @@ h5 {
   left: 0;
 }
 
-.card,
-.content {
+.card {
   height: 42vh;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1) !important;
@@ -113,16 +112,12 @@ h5 {
   border-radius: 1rem !important;
 }
 
-.mini-padding {
-  padding-left: 1.5rem;
-}
-
 .header {
   position: sticky;
   top: 4%;
   z-index: 1000;
   width: 90% !important;
-  padding: 0.6rem 2.5rem !important;
+  padding: 0.6rem 1rem !important;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -229,18 +224,18 @@ h5 {
 .steps-section p {
   font-weight: 200;
   letter-spacing: 0.01rem;
-  width: 90%;
 }
 
 .online-section {
-  padding: 7rem 0;
+  padding: 7rem 2rem;
 }
 .online-section .content {
+  height: auto;
+  padding: 1.5rem 1rem !important;
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 1rem;
-  margin-left: 0.5rem;
 }
 .online-section h5 {
   font-size: 1.2rem;
@@ -256,7 +251,7 @@ h5 {
 }
 
 .testimonial-section {
-  padding: 7rem 2.5rem !important;
+  padding: 0 2.5rem !important;
 }
 .testimonial-section .card {
   width: 75vw;
@@ -297,15 +292,18 @@ h5 {
 }
 
 .tips-section {
-  padding: 7rem 0;
+  padding-top: 7rem;
+}
+.tips-section .content {
+  background: rgba(149, 157, 165, 0.2);
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 1.5rem 1rem;
 }
 .tips-section p {
   line-height: 1.8;
   text-align: justify;
-}
-.tips-section .mini-padding {
-  padding-left: 1rem;
-  padding-right: 2rem;
 }
 
 .contact-section {
@@ -323,6 +321,9 @@ footer .container:first-child {
 @media (max-width: 1600px) {
   .heroSection .order-0 {
     order: 1 !important;
+  }
+  .testimonial-section {
+    padding: 7rem 0 !important;
   }
   .testimonial-section .card {
     width: auto;
@@ -359,7 +360,7 @@ footer .container:first-child {
     font-size: 1.8rem;
   }
   .heroSection {
-    margin: 4rem 0 0 0;
+    margin: 0;
   }
   .heroSection .order-0 {
     order: 0 !important;
@@ -385,17 +386,17 @@ footer .container:first-child {
   .steps-section h1 {
     font-size: 1.9rem;
   }
-  .online-section .col {
-    padding: 0 1rem;
-  }
   .online-section p {
     font-size: 0.9rem;
   }
-  .online-section .mini-padding {
-    padding-top: 0.5rem !important;
+  .testimonial-section {
+    overflow: hidden;
   }
   .testimonial-section .card {
-    width: 100%;
+    width: 95%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-left: 0.5rem;
   }
 }
 .top-btn {

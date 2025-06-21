@@ -5,7 +5,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  //  outline: 2px solid lime;
 }
 * {
   margin: 0;
@@ -93,23 +92,20 @@ h5 {
   border-radius: 0;
   left: 0;
 }
-.card,
-.content {
+.card {
   height: 42vh;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(5px) !important;
   border-radius: 1rem !important;
 }
-.mini-padding {
-  padding-left: 1.5rem;
-}
+
 .header {
   position: sticky;
   top: 4%;
   z-index: 1000;
   width: 90% !important;
-  padding: 0.6rem 2.5rem !important;
+  padding: 0.6rem 1rem !important;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 1rem;
@@ -212,16 +208,16 @@ h5 {
   p {
     font-weight: 200;
     letter-spacing: 0.01rem;
-    width: 90%;
   }
 }
 .online-section {
-  padding: 7rem 0;
+  padding: 7rem 2rem;
   .content {
+    height: auto;
+    padding: 1.5rem 1rem !important;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     border-radius: 1rem;
-    margin-left: .5rem;
   }
   h5 {
     font-size: 1.2rem;
@@ -238,7 +234,7 @@ h5 {
   }
 }
 .testimonial-section {
-  padding: 7rem 2.5rem !important;
+  padding: 0 2.5rem !important;
 
   .card {
     width: 75vw;
@@ -280,14 +276,16 @@ h5 {
   }
 }
 .tips-section {
-  padding: 7rem 0;
+  padding-top: 7rem;
+  .content{
+    background: rgba(149, 157, 165, 0.2);
+    border-radius: 1rem;
+    backdrop-filter: blur(5px);
+    padding: 1.5rem 1rem;
+  }
   p {
     line-height: 1.8;
     text-align: justify;
-  }
-  .mini-padding{
-    padding-left: 1rem;
-    padding-right: 2rem;
   }
 }
 .contact-section {
@@ -308,6 +306,7 @@ footer {
     }
   }
   .testimonial-section{
+    padding: 7rem 0 !important;
     .card{
       width: auto;
       height: 65vh;
@@ -346,7 +345,7 @@ footer {
     font-size: 1.8rem;
   }
   .heroSection {
-    margin: 4rem 0 0 0;
+    margin: 0;
     .order-0{
       order: 0 !important;
     }
@@ -373,19 +372,16 @@ footer {
     }
   }
   .online-section {
-    .col {
-      padding: 0 1rem;
-    }
     p {
       font-size: 0.9rem;
     }
-    .mini-padding {
-      padding-top: 0.5rem !important;
-    }
   }
   .testimonial-section {
+    overflow: hidden;
     .card {
-      width: 100%;
+      width: 95%;
+      height: fit-content;
+      margin-left: .5rem;
     }
   }
 }

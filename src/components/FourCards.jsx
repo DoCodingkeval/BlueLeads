@@ -1,9 +1,9 @@
 const FourCards = (props) => {
   return (
     <>
-      <div className="col">
+      <div className="col-12 col-md-6">
         <div className="content d-flex align-items-center justify-content-center shadow">
-          <div className="col-md-4">
+          <div className="col-0 col-md-4">
             <img
               src={props.imgsrc}
               loading="eager"
@@ -12,8 +12,8 @@ const FourCards = (props) => {
               alt="phone img"
             />
           </div>
-          <div className="col-md-8 mini-padding">
-            <h5 className="mb-3 fw-bolder">{props.title}</h5>
+          <div className="col-12 col-md-8 px-2">
+            <h5 className="fw-bolder">{props.title}</h5>
             <p>{props.description}</p>
           </div>
         </div>
