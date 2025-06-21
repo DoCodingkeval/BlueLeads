@@ -29,7 +29,9 @@ function App() {
       style={{ height: "100vh" }}
     >
       <RingLoader color="blue" size={100} />
-      <h3 className="pt-4">Just Hang on, it's cooking something...</h3>
+      <h3 className="pt-4 text-white">
+        Just Hang on, it's cooking something...
+      </h3>
     </div>
   );
 
