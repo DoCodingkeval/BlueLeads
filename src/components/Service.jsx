@@ -1,9 +1,8 @@
-import link from "../assets/link.gif";
-import speaker from "../assets/speaker.gif";
-import seo from "../assets/seo.gif";
-import { RiArrowRightLine } from "react-icons/ri";
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
+import Card from "./Card";
+import { ServiceCards } from "./Data";
+
 const Service = ({ children, direction = "up", delay = 0 }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -29,100 +28,38 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
 
   return (
     <>
-      <motion.div
+      <motion.section
         ref={ref}
         variants={variants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="container py-5 mt-5 mb-5 text-center"
+        className="container text-center service-section"
+        id="solutions"
       >
-        <section className="service-section padding" id="solutions">
-          {children}
-          <h1 className="cmn-heading">
-            what we will do for <br /> your business
-            <hr className="w-25 mx-auto" />
-          </h1>
-          <div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="row row-cols-1 row-cols-lg-3 mt-4 g-5 d-flex align-items-center justify-content-center"
-          >
-            <div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="col"
-            >
-              <div className="card border-0">
-                <img
-                  src={link}
-                  loading="eager"
-                  decoding="async"
-                  className="pt-3 img-fluid w-50 mx-auto"
-                  alt="link img"
+        {children}
+        <h1 className="cmn-heading">
+          what we will do for <br /> your business
+          <hr className="w-25 mx-auto" />
+        </h1>
+        <div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="row row-cols-1 row-cols-lg-3 mt-4 g-5 d-flex align-items-center justify-content-center"
+        >
+          {ServiceCards.map((item, index) => {
+            return (
+              <>
+                <Card
+                  key={index}
+                  imgsrc={item.imgsrc}
+                  title={item.card_title}
+                  description={item.card_description}
                 />
-                <div className="card-body">
-                  <h5 className="card-title pt-2 pt-lg-0">Link Building</h5>
-                  <p className="card-text">
-                    Hunky dory barney fanny around up the duff no biggie loo cup
-                    of tea jolly good ruddy say arse!
-                  </p>
-                  <button className="btn mt-3">
-                    <a href="">
-                      <RiArrowRightLine size={25} />
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="card border-0 shadow-lg">
-                <img
-                  src={speaker}
-                  loading="eager"
-                  decoding="async"
-                  className="pt-3 img-fluid w-50 mx-auto"
-                  alt="content img"
-                />
-                <div className="card-body">
-                  <h5 className="card-title pt-2 pt-lg-0">Content marketing</h5>
-                  <p className="card-text">
-                    Hunky dory barney fanny around up the duff no biggie loo cup
-                    of tea jolly good ruddy say arse!
-                  </p>
-                  <button className="btn mt-3">
-                    <a href="">
-                      <RiArrowRightLine size={25} />
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="card border-0">
-                <img
-                  src={seo}
-                  loading="eager"
-                  decoding="async"
-                  className="pt-3 img-fluid w-50 mx-auto"
-                  alt="seo img"
-                />
-                <div className="card-body">
-                  <h5 className="card-title pt-2 pt-lg-0">On Page SEO</h5>
-                  <p className="card-text">
-                    Hunky dory barney fanny around up the duff no biggie loo cup
-                    of tea jolly good ruddy say arse!
-                  </p>
-                  <button className="btn mt-3">
-                    <a href="">
-                      <RiArrowRightLine size={25} />
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </motion.div>
+              </>
+            );
+          })}
+        </div>
+      </motion.section>
     </>
   );
 };

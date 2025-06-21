@@ -2,8 +2,8 @@ import marketing from "../assets/marketing.png";
 
 const Showcase = () => {
   return (
-    <div className="container mb-4 mb-md-0 mb-lg-0">
-      <section className="steps-section py-5" id="process">
+    <>
+      <section className="container steps-section" id="process">
         <div className="row row-cols-lg-2 row-cols-1 text-white p-3 p-md-0">
           <div className="col">
             <img
@@ -14,7 +14,7 @@ const Showcase = () => {
               alt="phone img"
             />
           </div>
-          <div className="col px-md-5 mt-2 mt-lg-5">
+          <div className="col px-4 px-md-5 mt-2 mt-lg-5">
             <h1 className="fw-bold">
               Steps to Build A <br /> Successful Digital Product{" "}
             </h1>
@@ -33,7 +33,7 @@ const Showcase = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

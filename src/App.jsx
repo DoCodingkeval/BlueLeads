@@ -1,15 +1,17 @@
-import { lazy, useEffect, useState } from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import { useEffect, useState } from "react";
 import { RingLoader } from "react-spinners";
-const Hero = lazy(() => import("./components/Hero"));
-const Nav = lazy(() => import("./components/Nav"));
-const Modeservice = lazy(() => import("./components/Modeservice"));
-const Service = lazy(() => import("./components/Service"));
-const Showcase = lazy(() => import("./components/Showcase"));
-const Testimonial = lazy(() => import("./components/Testimonial"));
-const Tips = lazy(() => import("./components/Tips"));
-const Contact = lazy(() => import("./components/Contact"));
-const Footer = lazy(() => import("./components/Footer"));
-const GotoTop = lazy(() => import("./GotoTop"));
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import Service from "./components/Service";
+import Showcase from "./components/Showcase";
+import Modeservice from "./components/Modeservice";
+import Testimonial from "./components/Testimonial";
+import Tips from "./components/Tips";
+import Contact from "./components/Contact";
+import GotoTop from "./components/GotoTop";
+import Footer from "./components/Footer";
 
 function App() {
   const [isLoading, setLoading] = useState(false);
@@ -34,7 +36,7 @@ function App() {
   return (
     <>
       {isLoading ? (
-        <main>
+        <>
           <Nav />
           <Hero />
           <Service />
@@ -45,7 +47,7 @@ function App() {
           <Contact />
           <GotoTop />
           <Footer />
-        </main>
+        </>
       ) : (
         LoadingUI
       )}

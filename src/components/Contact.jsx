@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="container pt-2">
-      <section className="contact-section text-white" id="contact">
+    <>
+      <section className="container contact-section text-white" id="contact">
         <h1 className="cmn-heading text-center pt-5 pt-md-0">Contact Us</h1>
         <hr className="w-25 mx-auto" />
         <div className="container d-flex justify-content-center mt-5 py-4">
@@ -41,7 +41,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
