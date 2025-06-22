@@ -14,9 +14,9 @@ const Showcase = () => {
               alt="phone img"
             />
           </div>
-          <div className="col px-4 px-md-5 mt-2 mt-lg-5">
+          <div className="col px-4 px-md-5 mt-2 mt-lg-5 pb-md-4">
             <h1 className="fw-bold">
-              Steps to Build A <br /> Successful Digital Product{" "}
+              Steps to Build A <br /> Successful Digital Product
             </h1>
             <p className="mt-3 mt-md-4">
               Creating a digital product that stands out requires more than just

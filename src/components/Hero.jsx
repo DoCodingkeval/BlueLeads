@@ -1,4 +1,4 @@
-import hero from "../assets/hero.mp4";
+import hero from "../assets/hero.png";
 import { motion, useInView } from "motion/react";
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
             initial="hidden"
             animate="show"
             transition={{ duration: 0.6 }}
-            className="center col-md-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-1"
+            className="center col-md-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-1 mt-lg-5 pt-lg-5"
           >
             <h1>
               <span className="fw-bolder">W</span>
@@ -42,16 +42,7 @@ const Hero = () => {
             </a>
           </motion.div>
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">
-            <video
-              src={hero}
-              preload="none"
-              autoPlay
-              loop
-              muted
-              className="img-fluid rounded-4"
-            >
-              Your browser does not support the video tag.
-            </video>
+            <img src={hero} className="img-fluid mt-5" alt="heroimg" />
           </div>
         </div>
       </motion.section>

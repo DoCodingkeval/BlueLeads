@@ -3,8 +3,8 @@ import { RiArrowRightLine } from "react-icons/ri";
 const Card = (props) => {
   return (
     <>
-      <div className="col">
-        <div className="card border-0">
+      <div className="col pt-lg-5">
+        <div className="card py-lg-5 border-0">
           <img
             src={props.imgsrc}
             loading="eager"

@@ -33,7 +33,7 @@ const Service = ({ children, direction = "up", delay = 0 }) => {
         variants={variants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="container text-center service-section"
+        className="container text-center service-section mt-md-5"
         id="solutions"
       >
         {children}

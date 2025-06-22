@@ -20,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(to bottom, #141e30, #243b55, #141e30);
   color: #fff;
+  padding: 0 1rem;
 }
 
 input,
@@ -112,12 +113,22 @@ h5 {
   border-radius: 1rem !important;
 }
 
+.cmn-heading {
+  line-height: 1.4;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: 0.01rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
 .header {
   position: sticky;
   top: 4%;
   z-index: 1000;
   width: 90% !important;
-  padding: 0.6rem 1rem !important;
+  padding: 0 1rem !important;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -156,11 +167,11 @@ h5 {
 }
 
 .heroSection {
-  height: 90vh !important;
+  min-height: 100vh !important;
   position: relative;
 }
 .heroSection h1 {
-  font-size: 3.4rem;
+  font-size: 1.7rem;
 }
 .heroSection h1::first-letter {
   color: #29a9fd;
@@ -169,8 +180,11 @@ h5 {
 }
 .heroSection p {
   line-height: 1.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #c6c6c6 !important;
+}
+.heroSection img {
+  width: 90%;
 }
 .heroSection .order-0 {
   order: 0 !important;
@@ -183,7 +197,6 @@ h5 {
   padding: 7rem 0;
 }
 .service-section .card {
-  padding: 3rem 0;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   color: #fff;
@@ -200,16 +213,6 @@ h5 {
   box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !important;
 }
 
-.cmn-heading {
-  line-height: 1.4;
-  font-weight: 600;
-  font-size: 3rem;
-  color: #fff;
-  letter-spacing: 0.01rem;
-  text-transform: capitalize;
-  text-align: center;
-}
-
 .steps-section {
   padding: 7rem 0;
 }
@@ -219,46 +222,31 @@ h5 {
   padding: 3rem 0 !important;
 }
 .steps-section h1 {
-  font-size: 2.6rem;
+  font-size: 1.6rem;
 }
 .steps-section p {
-  font-weight: 200;
-  letter-spacing: 0.01rem;
+  font-weight: 300;
+  text-align: justify;
 }
 
 .online-section {
-  padding: 7rem 2rem;
+  padding: 4rem 0;
 }
-.online-section .content {
-  height: auto;
-  padding: 1.5rem 1rem !important;
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  border-radius: 1rem;
-}
-.online-section h5 {
+.online-section .card h5 {
   font-size: 1.2rem;
+  color: #29a9fd;
 }
-.online-section p {
+.online-section .card p {
   font-size: 1rem;
   text-align: justify;
   padding-top: 0.5rem;
   padding-right: 1.8rem;
 }
-.online-section video {
-  max-width: 33%;
-}
 
-.testimonial-section {
-  padding: 0 2.5rem !important;
-}
-.testimonial-section .card {
-  width: 75vw;
-}
 .testimonial-section .card h5 {
   font-size: 1.3rem;
   font-weight: 600;
+  color: #29a9fd;
   letter-spacing: 0.04rem;
 }
 .testimonial-section .card img {
@@ -271,18 +259,10 @@ h5 {
   border-radius: 50% !important;
   margin: 0.6rem 0;
 }
-.testimonial-section .mySwiper {
-  width: 100%;
-  max-width: 100vw;
-}
 .testimonial-section .star {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #c850c0;
   margin-top: 2rem;
-}
-.testimonial-section .cmn-heading {
-  line-height: 1;
-  padding-top: 0.8rem;
 }
 .testimonial-section .card {
   transition: 0.3s ease-in-out;
@@ -291,23 +271,40 @@ h5 {
   box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !important;
 }
 
-.tips-section {
-  padding-top: 7rem;
-}
-.tips-section .content {
-  background: rgba(149, 157, 165, 0.2);
-  border-radius: 1rem;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  padding: 1.5rem 1rem;
+.tips-section h5 {
+  color: #29a9fd;
 }
 .tips-section p {
   line-height: 1.8;
   text-align: justify;
 }
 
-.contact-section {
-  padding: 7rem 0;
+.contact-section form input,
+.contact-section form textarea {
+  width: 100%;
+  outline: transparent;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2.5rem;
+  background: rgba(149, 157, 165, 0.2) !important;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: none;
+  color: #fff;
+}
+.contact-section form input::-moz-placeholder, .contact-section form textarea::-moz-placeholder {
+  color: #fff;
+}
+.contact-section form input::placeholder,
+.contact-section form textarea::placeholder {
+  color: #fff;
+}
+.contact-section form input:not(:-moz-placeholder-shown), .contact-section form textarea:not(:-moz-placeholder-shown) {
+  border: 2px solid #eaeaec;
+}
+.contact-section form input:not(:placeholder-shown),
+.contact-section form textarea:not(:placeholder-shown) {
+  border: 2px solid #eaeaec;
 }
 
 footer .container:first-child {
@@ -315,88 +312,102 @@ footer .container:first-child {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 1rem;
-  width: 95%;
 }
 
-@media (max-width: 1600px) {
-  .heroSection .order-0 {
-    order: 1 !important;
-  }
-  .testimonial-section {
-    padding: 7rem 0 !important;
-  }
-  .testimonial-section .card {
-    width: auto;
-    height: 65vh;
-  }
-}
-@media (max-width: 768px) {
-  .heroSection {
-    margin: 6rem 0;
-  }
-  .heroSection video {
-    width: 70%;
-  }
-  .heroSection .order-0 {
-    order: 0 !important;
-  }
-  .testimonial-section .card {
-    width: auto;
-    height: 75vh;
-  }
-}
-@media (max-width: 426px) {
-  .btn {
-    font-size: 1rem !important;
-    padding: 0.5rem 1.4rem !important;
-  }
-  .top-btn {
-    font-size: 0.7rem !important;
-  }
-  .padding {
-    padding: 3rem 1.5rem;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    padding: 0;
   }
   .cmn-heading {
-    font-size: 1.8rem;
+    font-size: 2.7rem;
+  }
+  .header {
+    padding: 0.2rem 2rem !important;
+  }
+  .heroSection img {
+    width: 80%;
+  }
+  .heroSection h1 {
+    font-size: 3rem;
+  }
+  .heroSection p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .service-section .col h5 {
+    font-size: 1.7rem;
+  }
+  .service-section .col p {
+    padding: 0 2rem;
+  }
+  .steps-section {
+    padding: 0 1.7rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  .steps-section h1 {
+    font-size: 2.5rem;
+  }
+  .online-section .card h5 {
+    font-size: 1.5rem;
+  }
+  .testimonial-section {
+    padding: 2.5rem 0;
+  }
+  .testimonial-section .card {
+    height: 70vh;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1593px) {
+  .cmn-heading {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  .header {
+    padding: 0.7rem 3rem !important;
   }
   .heroSection {
-    margin: 0;
+    min-height: auto !important;
   }
   .heroSection .order-0 {
-    order: 0 !important;
-  }
-  .heroSection .order-1 {
     order: 1 !important;
   }
   .heroSection h1 {
-    font-size: 1.8rem;
+    font-size: 3.5rem;
   }
   .heroSection p {
-    font-size: 0.9rem;
-    letter-spacing: normal;
-    line-height: normal;
-    margin-top: 1rem;
+    font-size: 1.1rem;
   }
-  .heroSection video {
-    width: 90%;
-  }
-  .steps-section {
-    padding: 0 1.8rem !important;
+  .service-section .card h5 {
+    font-size: 1.7rem;
   }
   .steps-section h1 {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
   }
-  .online-section p {
-    font-size: 0.9rem;
+  .steps-section p {
+    padding-right: 1.7rem;
+    font-size: 1.1rem;
   }
-  .testimonial-section {
-    overflow: hidden;
+  .online-section .card h5 {
+    font-size: 1.8rem;
   }
-  .testimonial-section .card {
-    width: 95%;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin-left: 0.5rem;
+  .online-section .card img {
+    width: 70%;
+  }
+  .testimonial-section .card img {
+    width: 90%;
+    height: auto;
+  }
+  .testimonial-section .card h5 {
+    font-size: 1.6rem;
+  }
+  .testimonial-section .card .star {
+    font-size: 2rem;
+  }
+  .tips-section .card h5 {
+    font-size: 1.8rem;
+  }
+  .tips-section .card img {
+    width: 70%;
   }
 }
 .top-btn {
@@ -409,9 +420,6 @@ footer .container:first-child {
   font-size: 1.2rem;
   cursor: pointer;
   z-index: 999;
-}
-.top-btn .arrow {
-  animation: updown 1s infinite linear alternate-reverse;
 }
 
 .top-btn::before {
@@ -446,13 +454,4 @@ footer .container:first-child {
 .top-btn:hover::before,
 .top-btn:hover::after {
   visibility: visible;
-}
-
-@keyframes updown {
-  0% {
-    transform: translateY(-0.3rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }/*# sourceMappingURL=main.css.map */

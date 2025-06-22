@@ -1,7 +1,5 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
 import User from "./User";
 import { TestimonialData } from "./Data";
 import "slick-carousel/slick/slick.css";
@@ -45,12 +43,15 @@ const Testimonial = () => {
   };
   return (
     <>
-      <section className="container testimonial-section" id="testimonials">
-        <h1 className="cmn-heading text-center text-capitalize text-white mt-3 mb-5 mb-md-0">
+      <section
+        className="container testimonial-section mb-5 pb-5"
+        id="testimonials"
+      >
+        <h1 className="cmn-heading text-center text-capitalize text-white mt-3 mt-lg-5 pt-lg-5 mb-5 mb-md-0">
           What client say <br /> about us
           <hr className="w-25 mx-auto" />
         </h1>
-        <div className="slider-container">
+        <div className="slider-container mt-md-5 pt-md-5">
           <Slider {...settings}>
             {TestimonialData.map((item, index) => (
               <div className="container">
