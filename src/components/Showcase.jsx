@@ -1,4 +1,4 @@
-import marketing from "../assets/marketing.webp";
+import marketing from "../assets/marketing.svg";
 
 const Showcase = () => {
   return (

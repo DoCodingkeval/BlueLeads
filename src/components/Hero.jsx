@@ -1,4 +1,4 @@
-import hero from "../assets/hero.avif";
+import hero from "../assets/hero.svg";
 import { motion } from "motion/react";
 
 const Hero = () => {
