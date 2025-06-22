@@ -1,22 +1,7 @@
 import { RiArrowDownSLine, RiMore2Line } from "react-icons/ri";
-import { motion } from "motion/react";
 import { useState } from "react";
 
 const Nav = () => {
-  const containerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: -50 },
-    show: { opacity: 1, y: 0 },
-  };
-
   const [isopen, setIsOpen] = useState(false);
   const toggleDropdown = () => setIsOpen(!isopen);
 
@@ -33,23 +18,9 @@ const Nav = () => {
   return (
     <div className="container shadow header">
       <nav className="navbar navbar-expand-lg">
-        <motion.a
-          className="navbar-brand mx-3 mx-md-0 mx-lg-0 fw-bold"
-          href="#"
-          initial={{
-            x: -220,
-            opacity: 0,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 0.5,
-          }}
-        >
+        <a className="navbar-brand mx-3 mx-md-0 mx-lg-0 fw-bold" href="#">
           <span>Blue</span>Leads
-        </motion.a>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -64,30 +35,20 @@ const Nav = () => {
           </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <motion.ul
-            className="navbar-nav px-3 px-md-0 ms-auto fw-bold"
-            initial="hidden"
-            variants={containerVariants}
-            animate="show"
-          >
+          <ul className="navbar-nav px-3 px-md-0 ms-auto fw-bold">
             {navItems.map((item, index) => {
               if (typeof item === "string") {
                 return (
-                  <motion.li
-                    key={index}
-                    className="nav-item"
-                    variants={itemVariants}
-                  >
+                  <li key={index} className="nav-item">
                     <a href={`#${item.toLowerCase()}`} className="nav-link">
                       {item}
                     </a>
-                  </motion.li>
+                  </li>
                 );
               } else if (item.dropdown) {
                 return (
                   <div className="dropdown text-white">
-                    <motion.li
-                      variants={itemVariants}
+                    <li
                       className="nav-item"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -103,7 +64,7 @@ const Nav = () => {
                           size={30}
                         />
                       </a>
-                    </motion.li>
+                    </li>
                     <ul className="dropdown-menu">
                       <li>
                         <a className="dropdown-item" href="#solutions">
@@ -130,7 +91,7 @@ const Nav = () => {
                 );
               }
             })}
-          </motion.ul>
+          </ul>
         </div>
       </nav>
     </div>

@@ -1,4 +1,4 @@
-import marketing from "../assets/marketing.png";
+import marketing from "../assets/marketing.webp";
 
 const Showcase = () => {
   return (

@@ -1,15 +1,14 @@
 import link from "../assets/link.gif";
 import speaker from "../assets/speaker.gif";
 import seo from "../assets/seo.gif";
-import socialmedia from "../assets/socialmedia.png";
-import influence from "../assets/influence.png";
-import content from "../assets/content.png";
-import referral from "../assets/referral.png";
-import { RiBookOpenFill } from "react-icons/ri";
-import webdev from "../assets/webdev.png";
-import freelancing from "../assets/freelancing.png";
-import graphicdesigner from "../assets/designer.png";
-import wordpress from "../assets/wordpress.png";
+import socialmedia from "../assets/socialmedia.webp";
+import influence from "../assets/influence.webp";
+import content from "../assets/content.webp";
+import referral from "../assets/referral.webp";
+import webdev from "../assets/webdev.webp";
+import freelancing from "../assets/freelancing.webp";
+import graphicdesigner from "../assets/designer.webp";
+import wordpress from "../assets/wordpress.webp";
 import user1 from "../assets/user-1.png";
 import user2 from "../assets/user-2.png";
 import user3 from "../assets/user-3.png";
@@ -19,12 +18,7 @@ import user6 from "../assets/user-6.png";
 import user7 from "../assets/user-7.png";
 import user8 from "../assets/user-8.png";
 import user9 from "../assets/user-9.png";
-import {
-  RiStarSFill,
-  RiStarLine,
-  RiStarHalfFill,
-  RiStarHalfLine,
-} from "react-icons/ri";
+import { RiStarSFill, RiStarLine, RiStarHalfFill } from "react-icons/ri";
 
 export const ServiceCards = [
   {

@@ -1,9 +1,9 @@
-import hero from "../assets/hero.png";
-import { motion, useInView } from "motion/react";
+import hero from "../assets/hero.avif";
+import { motion } from "motion/react";
 
 const Hero = () => {
   const divVariant = {
-    hidden: { opacity: 0, y: -200 },
+    hidden: { opacity: 0, y: -100 },
     show: { opacity: 1, y: 0 },
   };
 
@@ -18,7 +18,7 @@ const Hero = () => {
             variants={divVariant}
             initial="hidden"
             animate="show"
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="center col-md-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-1 mt-lg-5 pt-lg-5"
           >
             <h1>
@@ -42,7 +42,12 @@ const Hero = () => {
             </a>
           </motion.div>
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">
-            <img src={hero} className="img-fluid mt-5" alt="heroimg" />
+            <img
+              src={hero}
+              loading="lazy"
+              className="img-fluid mt-5"
+              alt="heroimg"
+            />
           </div>
         </div>
       </motion.section>

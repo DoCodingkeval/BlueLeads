@@ -3,13 +3,9 @@ const User = (props) => {
     <>
       <div className="col p-lg-5">
         <div className="card py-3 text-center text-white">
-          <img
-            src={props.imgsrc}
-            fetchPriority="high"
-            loading="lazy"
-            className="img-fluid mx-auto"
-            alt="user"
-          />
+          <picture>
+            <img src={props.imgsrc} className="img-fluid mx-auto" alt="user" />
+          </picture>
           <div className="card-body">
             <h5 className="card-title">{props.name}</h5>
             <p className="card-text mt-3">{props.review}</p>
