@@ -1,3 +1,4 @@
+import { Container } from "react-bootstrap";
 import { RiArrowDownSLine, RiMore2Line } from "react-icons/ri";
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
@@ -17,7 +18,7 @@ const Nav = () => {
   ];
 
   return (
-    <div className="container shadow header">
+    <Container className="header">
       <nav className="navbar navbar-expand-lg">
         <HashLink className="navbar-brand mx-3 mx-md-0 mx-lg-0 fw-bold" to="/">
           <span>Blue</span>Leads
@@ -98,7 +99,7 @@ const Nav = () => {
           </ul>
         </div>
       </nav>
-    </div>
+    </Container>
   );
 };
 

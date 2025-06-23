@@ -1,4 +1,4 @@
-import { RiInstagramLine, RiTwitterLine, RiWhatsappLine } from "react-icons/ri";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Footer = () => {
   return (
@@ -24,13 +24,13 @@ const Footer = () => {
           </p>
           <div className="mb-4">
             <a href="#">
-              <RiInstagramLine className="mx-lg-3" size={25} />
+              <i className="bi bi-instagram mx-lg-3"></i>
             </a>
             <a href="#">
-              <RiWhatsappLine className="mx-2 mx-lg-5" size={25} />
+              <i className="bi bi-whatsapp mx-2 mx-lg-5"></i>
             </a>
             <a href="#">
-              <RiTwitterLine size={25} />
+              <i className="bi bi-twitter"></i>
             </a>
           </div>
         </div>

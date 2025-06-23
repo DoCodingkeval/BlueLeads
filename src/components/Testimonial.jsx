@@ -1,6 +1,7 @@
+import { Container, Row } from "react-bootstrap";
 import User from "./User";
 import { TestimonialData } from "./Data";
-import { div } from "framer-motion/m";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Testimonial = () => {
   const chunkArray = (arr, size) => {
@@ -15,10 +16,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <section
-        className="container testimonial-section mb-5 pb-5"
-        id="testimonials"
-      >
+      <Container className="testimonial-section mb-5 pb-5" id="testimonials">
         <h1 className="cmn-heading text-center text-capitalize text-white mt-3 mt-lg-5 pt-lg-5 mb-5 mb-md-0">
           What client say <br /> about us
           <hr className="w-25 mx-auto" />
@@ -44,7 +42,7 @@ const Testimonial = () => {
                   key={index}
                   className={`carousel-item ${index === 0 ? "active" : ""}`}
                 >
-                  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 pt-5">
+                  <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 pt-5">
                     {item.map((item, index) => (
                       <User
                         key={index}
@@ -54,7 +52,7 @@ const Testimonial = () => {
                         rating={item.rating}
                       />
                     ))}
-                  </div>
+                  </Row>
                 </div>
               );
             })}
@@ -84,7 +82,7 @@ const Testimonial = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </section>
+      </Container>
     </>
   );
 };

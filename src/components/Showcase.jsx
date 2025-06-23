@@ -1,9 +1,10 @@
-import marketing from "../assets/marketing.svg";
+import marketing from "../assets/showcase/marketing.svg";
+import { Container } from "react-bootstrap";
 
 const Showcase = () => {
   return (
     <>
-      <section className="container steps-section" id="process">
+      <Container className="steps-section" id="process">
         <div className="row row-cols-lg-2 row-cols-1 text-white p-3 p-md-0">
           <div className="col">
             <img
@@ -32,7 +33,7 @@ const Showcase = () => {
             </a>
           </div>
         </div>
-      </section>
+      </Container>
     </>
   );
 };

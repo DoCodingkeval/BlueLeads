@@ -12,6 +12,7 @@ const Tips = React.lazy(() => import("./components/Tips"));
 import Contact from "./components/Contact";
 import GotoTop from "./components/GotoTop";
 import Footer from "./components/Footer";
+import Online from "./components/Online";
 
 function App() {
   return (

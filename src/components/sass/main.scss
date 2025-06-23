@@ -10,16 +10,17 @@
   margin: 0;
   font-family: "Poppins", serif;
 }
+//TypoGraphy Styles
 html,
 body {
+  scroll-behavior: smooth;
   height: 100%;
 }
 body {
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background: linear-gradient(to bottom, #141e30, #243b55, #141e30);
   color: $text-white;
-  padding: 0 1rem;
+  padding: 0 $radius;
 }
 input,
 button,
@@ -95,10 +96,12 @@ h5 {
 }
 .card {
   height: 42vh;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(5px) !important;
-  border-radius: 1rem !important;
+  color: $text-white !important;
+  transition: .3s ease-in-out;
+  padding: $radius;
+  background: $background !important;
+  backdrop-filter: $blur !important;
+  border-radius: $radius !important;
 }
 .cmn-heading {
   line-height: 1.4;
@@ -109,15 +112,16 @@ h5 {
   text-transform: capitalize;
   text-align: center;
 }
+//Header Styles
 .header {
   position: sticky;
   top: 4%;
   z-index: 1000;
   width: 90% !important;
   padding: 0 1rem !important;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  border-radius: 1rem;
+  background-color: $background;
+  backdrop-filter: $blur;
+  border-radius: $radius;
   .navbar {
     .navbar-brand span {
       color: $text-blue;
@@ -126,7 +130,7 @@ h5 {
     .nav-link,
     .navbar-brand {
       color: $text-white;
-      transition: 0.4s ease-in-out;
+      transition: .4s ease-in-out;
     }
     .navbar-toggler:focus {
       border: none;
@@ -137,21 +141,23 @@ h5 {
       color: $text-blue !important;
     }
     .dropdown-menu {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(5px);
+      background: $background;
+      backdrop-filter: $blur;
 
       li a {
         color: $text-white;
         font-weight: 600;
-        transition: color 0.4s ease-in-out;
+        transition: color .3s ease;
       }
       li a:hover {
         background: transparent;
-        color: #0b1320;
+        color: $text-blue;
       }
     }
   }
 }
+
+//Hero Section Styles
 .heroSection {
   min-height: 100vh !important;
   position: relative;
@@ -178,13 +184,11 @@ h5 {
     order: 1 !important;
   }
 }
+
+//Service Section Styles
 .service-section {
   padding: 7rem 0;
   .card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    color: $text-white;
-    transition: 0.3s ease-in-out;
 
     h5 {
       font-size: 1.3rem;
@@ -200,11 +204,12 @@ h5 {
   }
 }
 
+//Steps Section Styles
 .steps-section {
   padding: 7rem 0;
   & .row {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
+    background: $background;
+    border-radius: $radius;
     padding: 3rem 0 !important;
   }
   & h1 {
@@ -215,21 +220,23 @@ h5 {
     text-align: justify;
   }
 }
+
+//Online Section Styles
 .online-section {
   padding: 4rem 0;
-  .card {
-    h5 {
-      font-size: 1.2rem;
-      color: $text-blue;
-    }
-    p {
-      font-size: 1rem;
-      text-align: justify;
-      padding-top: 0.5rem;
-      padding-right: 1.8rem;
-    }
+  & h5 {
+    font-size: 1.2rem;
+    color: $text-blue;
+  }
+  p {
+    font-size: 1rem;
+    text-align: justify;
+    padding-top: 0.5rem;
+    padding-right: 1.8rem;
   }
 }
+
+//Testimonial Section Styles
 .testimonial-section {
   .card {
     & h5 {
@@ -254,12 +261,14 @@ h5 {
     }
   }
   .card {
-    transition: 0.3s ease-in-out;
+    transition: .3s ease-in-out;
   }
   .card:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !important;
   }
 }
+
+//Tips Section Styles
 .tips-section {
   & h5 {
     color: $text-blue;
@@ -269,17 +278,19 @@ h5 {
     text-align: justify;
   }
 }
+
+//Contact Section styles
 .contact-section {
   form {
     input,
     textarea {
       width: 100%;
       outline: transparent;
-      border-radius: 0.3rem;
-      padding: 0.5rem 1rem;
+      border-radius: .3rem;
+      padding: .5rem 1rem;
       margin-bottom: 2.5rem;
-      background: rgba(149, 157, 165, 0.2) !important;
-      backdrop-filter: blur(5px);
+      background: $background !important;
+      backdrop-filter: $blur;
       border: none;
       color: $text-white;
     }
@@ -293,13 +304,17 @@ h5 {
     }
   }
 }
+
+//Footer Styles
 footer {
   .container:first-child {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 1rem;
+    background: $background;
+    backdrop-filter: $blur;
+    border-radius: $radius;
   }
 }
+
+//Responsive Media Queries Styles
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
     padding: 0;
@@ -340,10 +355,8 @@ footer {
     }
   }
   .online-section {
-    .card {
-      h5 {
-        font-size: 1.5rem;
-      }
+    & h5 {
+      font-size: 1.5rem;
     }
   }
   .testimonial-section {
@@ -359,7 +372,7 @@ footer {
     line-height: 1.2;
   }
   .header {
-    padding: 0.7rem 3rem !important;
+    padding: .7rem 3rem !important;
   }
   .heroSection {
     min-height: auto !important;
@@ -381,6 +394,7 @@ footer {
     }
   }
   .steps-section {
+    padding-top: 9rem;
     & h1 {
       font-size: 2.5rem;
     }
@@ -390,16 +404,49 @@ footer {
     }
   }
   .online-section {
-    .card {
-      & h5 {
-        font-size: 1.8rem;
+    padding-top: 10rem;
+    & h5 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    & p {
+      font-size: 1.2rem;
+    }
+    .row:nth-child(2){
+      h5, p{
+        text-align: right;
       }
-      & img {
-        width: 70%;
+      h5{
+        margin-right: 1.7rem;
+      }
+    }
+    .row:nth-child(4){
+      h5, p{
+        text-align: right;
+      }
+      h5{
+        margin-right: 1.7rem;
+      }
+    }
+    .row:nth-child(3) {
+      .col-md-6:first-child {
+        order: 1;
+      }
+      p {
+        text-align: left;
+      }
+    }
+    .row:nth-child(5) {
+      .col-md-6:first-child {
+        order: 1;
+      }
+      p {
+        text-align: left;
       }
     }
   }
   .testimonial-section {
+    padding-top: 5rem;
     .card {
       & img {
         width: 90%;
@@ -414,6 +461,7 @@ footer {
     }
   }
   .tips-section {
+    margin-top: 8rem;
     .card {
       & h5 {
         font-size: 1.8rem;
@@ -425,6 +473,7 @@ footer {
   }
 }
 
+//GotoTop Btn Styles
 .top-btn {
   position: relative;
   position: fixed;

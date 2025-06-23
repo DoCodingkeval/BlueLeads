@@ -1,5 +1,7 @@
-import hero from "../assets/hero.svg";
+import { Container, Row } from "react-bootstrap";
+import hero from "../assets/hero/hero.svg";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const divVariant = {
@@ -9,11 +11,12 @@ const Hero = () => {
 
   return (
     <>
-      <motion.section
-        className="container heroSection text-center d-flex justify-content-center align-items-center"
+      <Container
+        as="div"
+        className="heroSection text-center d-flex justify-content-center align-items-center"
         id="home"
       >
-        <div className="row">
+        <Row>
           <motion.div
             variants={divVariant}
             initial="hidden"
@@ -34,23 +37,23 @@ const Hero = () => {
               engagement and sales. From SEO to paid ads, we bring you leads
               that matter — so you can grow faster, smarter.
             </p>
-            <a
-              href="#"
+            <Link
+              to="/"
               className="btn link mt-2 mt-md-3 mx-auto mx-lg-0 fw-bold"
             >
               Get Started
-            </a>
+            </Link>
           </motion.div>
           <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">
             <img
               src={hero}
               loading="lazy"
-              className="img-fluid mt-5"
+              className="img-fluid mt-lg-5 pt-lg-5"
               alt="heroimg"
             />
           </div>
-        </div>
-      </motion.section>
+        </Row>
+      </Container>
     </>
   );
 };
