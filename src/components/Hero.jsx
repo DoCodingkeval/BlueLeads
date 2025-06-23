@@ -16,7 +16,7 @@ const Hero = () => {
         className="heroSection text-center d-flex justify-content-center align-items-center"
         id="home"
       >
-        <Row>
+        <Row className="mt-lg-5 pt-lg-4">
           <motion.div
             variants={divVariant}
             initial="hidden"
@@ -44,11 +44,11 @@ const Hero = () => {
               Get Started
             </Link>
           </motion.div>
-          <div className="col-12 col-lg-6 mb-5 mb-lg-0 text-lg-end order-0">
+          <div className="col-12 col-lg-6 mb-lg-0 pb-3 text-lg-end order-0">
             <img
               src={hero}
               loading="lazy"
-              className="img-fluid mt-lg-5 pt-lg-5"
+              className="img-fluid"
               alt="heroimg"
             />
           </div>
