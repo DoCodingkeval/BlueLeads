@@ -18,10 +18,10 @@ import user6 from "../assets/user-6.png";
 import user7 from "../assets/user-7.png";
 import user8 from "../assets/user-8.png";
 import user9 from "../assets/user-9.png";
-import { RiStarSFill, RiStarLine, RiStarHalfFill } from "react-icons/ri";
 
 export const ServiceCards = [
   {
+    id: 1,
     imgsrc: link,
     card_title: "Link Building",
     card_description:
@@ -29,12 +29,14 @@ export const ServiceCards = [
   },
 
   {
+    id: 2,
     imgsrc: speaker,
     card_title: "Content marketing",
     card_description:
       "Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse!",
   },
   {
+    id: 3,
     imgsrc: seo,
     card_title: "On Page SEO",
     card_description:
@@ -44,24 +46,28 @@ export const ServiceCards = [
 
 export const DataCards = [
   {
+    id: 1,
     imgsrc: socialmedia,
     card_title: "Social Media Advertising",
     card_description:
       "Reach a wider audience by creating engaging ads on platforms like Facebook, Instagram and LinkedIn. Target specific demographics to connect with potential customers interested in your services.",
   },
   {
+    id: 2,
     imgsrc: influence,
     card_title: "Influencer Marketing",
     card_description:
       "Partner with influential individuals or bloggers in your industry to tap into their audience. Through sponsored posts or endorsements, you can generate interest and attract new customers to your online channels.",
   },
   {
+    id: 3,
     imgsrc: content,
     card_title: "Content Marketing",
     card_description:
       "Publish valuable and optimized content on your website's blog. Attract organic traffic, position your brand as an authority, and encourage visitors to engage and make a purchase.",
   },
   {
+    id: 4,
     imgsrc: referral,
     card_title: "Referral Programs",
     card_description:
@@ -102,132 +108,60 @@ export const TestimonialData = [
     user_name: "Angelina Thapa",
     user_review:
       "“Exceeded my expectations! Clean interface and everything is easy to manage.”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarLine />
-      </>
-    ),
+    rating: 4,
   },
   {
     imgsrc: user2,
     user_name: "Ravi Sharma",
     user_review:
       "“Best service I’ve used! Super responsive support and great results.”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-      </>
-    ),
+    rating: 5,
   },
   {
     imgsrc: user3,
     user_name: "Daniel Brooks",
     user_review:
       "“Impressed by the attention to detail—everything runs smoothly and feels premium.”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarHalfFill />
-      </>
-    ),
+    rating: 4,
   },
   {
     imgsrc: user4,
     user_name: "Priya Mehra",
     user_review:
       "“Fantastic service and design — I’ve recommended it to others!”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-      </>
-    ),
+    rating: 4.5,
   },
   {
     imgsrc: user5,
     user_name: "Kunal Desai",
     user_review:
       "“Smooth experience from start to finish — everything worked perfectly.”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarLine />
-      </>
-    ),
+    rating: 4,
   },
   {
     imgsrc: user6,
     user_name: "Ritika Sinha",
     user_review:
       "“Super easy and effective — really impressed with the results!”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-      </>
-    ),
+    rating: 5,
   },
   {
     imgsrc: user7,
     user_name: "Arjun Kulkarni",
     user_review: "“Clean, responsive, and thoughtfully designed.”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-      </>
-    ),
+    rating: 3.5,
   },
   {
     imgsrc: user8,
     user_name: "Sneha Rathi",
     user_review:
       "“Loved the vibrant design and smooth performance — exceeded expectations!”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarLine />
-      </>
-    ),
+    rating: 4.5,
   },
   {
     imgsrc: user9,
     user_name: "Markus Weber",
     user_review: "“Reliable, easy to use, and super helpful from the start.”",
-    stars: (
-      <>
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarSFill />
-        <RiStarHalfFill />
-      </>
-    ),
+    rating: 4,
   },
 ];

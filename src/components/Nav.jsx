@@ -1,5 +1,6 @@
 import { RiArrowDownSLine, RiMore2Line } from "react-icons/ri";
 import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
 
 const Nav = () => {
   const [isopen, setIsOpen] = useState(false);
@@ -18,9 +19,9 @@ const Nav = () => {
   return (
     <div className="container shadow header">
       <nav className="navbar navbar-expand-lg">
-        <a className="navbar-brand mx-3 mx-md-0 mx-lg-0 fw-bold" href="#">
+        <HashLink className="navbar-brand mx-3 mx-md-0 mx-lg-0 fw-bold" to="/">
           <span>Blue</span>Leads
-        </a>
+        </HashLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -40,9 +41,12 @@ const Nav = () => {
               if (typeof item === "string") {
                 return (
                   <li key={index} className="nav-item">
-                    <a href={`#${item.toLowerCase()}`} className="nav-link">
+                    <HashLink
+                      to={`#${item.toLowerCase()}`}
+                      className="nav-link"
+                    >
                       {item}
-                    </a>
+                    </HashLink>
                   </li>
                 );
               } else if (item.dropdown) {
@@ -54,7 +58,7 @@ const Nav = () => {
                       aria-expanded="false"
                       onClick={toggleDropdown}
                     >
-                      <a href="" className="nav-link">
+                      <HashLink to="/" className="nav-link">
                         Services
                         <RiArrowDownSLine
                           style={{
@@ -63,28 +67,28 @@ const Nav = () => {
                           }}
                           size={30}
                         />
-                      </a>
+                      </HashLink>
                     </li>
                     <ul className="dropdown-menu">
                       <li>
-                        <a className="dropdown-item" href="#solutions">
+                        <HashLink className="dropdown-item" to="#solutions">
                           Solutions
-                        </a>
+                        </HashLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#process">
+                        <HashLink className="dropdown-item" to="#process">
                           Process
-                        </a>
+                        </HashLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#testimonials">
+                        <HashLink className="dropdown-item" to="#testimonials">
                           Testimonials
-                        </a>
+                        </HashLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#insights">
+                        <HashLink className="dropdown-item" to="#insights">
                           Insights
-                        </a>
+                        </HashLink>
                       </li>
                     </ul>
                   </div>

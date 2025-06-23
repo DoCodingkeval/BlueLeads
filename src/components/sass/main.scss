@@ -247,11 +247,11 @@ h5 {
       border-radius: 50% !important;
       margin: 0.6rem 0;
     }
-  }
-  .star {
-    font-size: 1.5rem;
-    color: $text-pink;
-    margin-top: 2rem;
+    & .star {
+      font-size: 1.5rem !important;
+      color: $text-pink;
+      margin-top: 2rem;
+    }
   }
   .card {
     transition: 0.3s ease-in-out;

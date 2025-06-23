@@ -1,46 +1,18 @@
-import "swiper/css";
-import "swiper/css/navigation";
 import User from "./User";
 import { TestimonialData } from "./Data";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import { div } from "framer-motion/m";
 
 const Testimonial = () => {
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 3,
-          infinite: false,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const chunkArray = (arr, size) => {
+    const result = [];
+    for (let i = 0; i < arr.length; i += size) {
+      result.push(arr.slice(i, i + size));
+    }
+    return result;
   };
+
+  const UserAllData = chunkArray(TestimonialData, 3);
+
   return (
     <>
       <section
@@ -51,22 +23,66 @@ const Testimonial = () => {
           What client say <br /> about us
           <hr className="w-25 mx-auto" />
         </h1>
-        <div className="slider-container mt-md-5 pt-md-5">
-          <Slider {...settings}>
-            {TestimonialData.map((item, index) => (
-              <div className="container">
-                <div className="row align-items-center g-5">
-                  <User
-                    key={index}
-                    imgsrc={item.imgsrc}
-                    name={item.user_name}
-                    review={item.user_review}
-                    star={item.stars}
-                  />
-                </div>
-              </div>
+        <div id="carouselExampleIndicators" className="carousel slide">
+          <div className="carousel-indicators">
+            {UserAllData.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to={index}
+                className={index === 0 ? "active" : ""}
+                aria-current={index === 0 ? "true" : undefined}
+                aria-label={`Slide ${index + 1}`}
+              ></button>
             ))}
-          </Slider>
+          </div>
+          <div className="carousel-inner">
+            {UserAllData.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                >
+                  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 pt-5">
+                    {item.map((item, index) => (
+                      <User
+                        key={index}
+                        imgsrc={item.imgsrc}
+                        name={item.user_name}
+                        review={item.user_review}
+                        rating={item.rating}
+                      />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
     </>
