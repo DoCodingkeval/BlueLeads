@@ -21,7 +21,7 @@ const Hero = () => {
             variants={divVariant}
             initial="hidden"
             animate="show"
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="center col-md-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-1 mt-lg-5 pt-lg-5"
           >
             <h1>
@@ -45,7 +45,10 @@ const Hero = () => {
             </Link>
           </motion.div>
           <div className="col-12 col-lg-6 mb-lg-0 pb-3 text-lg-end order-0">
-            <img
+            <motion.img
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               src={hero}
               loading="lazy"
               className="img-fluid"

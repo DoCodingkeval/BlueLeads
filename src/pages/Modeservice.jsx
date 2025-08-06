@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import { DataCards } from "./Data";
-import Online from "./Online";
+import { DataCards } from "../components/Data";
+import Online from "../components/Online";
 
 const Modeservice = () => {
   return (

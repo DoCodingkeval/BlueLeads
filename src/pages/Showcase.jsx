@@ -1,12 +1,18 @@
 import marketing from "../assets/showcase/marketing.svg";
 import { Container } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 const Showcase = () => {
   return (
     <>
       <Container className="steps-section" id="process">
         <div className="row row-cols-lg-2 row-cols-1 text-white p-3 p-md-0">
-          <div className="col">
+          <motion.div
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="col"
+          >
             <img
               src={marketing}
               loading="eager"
@@ -14,8 +20,13 @@ const Showcase = () => {
               className="img-fluid w-75 mx-auto d-block"
               alt="phone img"
             />
-          </div>
-          <div className="col px-4 px-md-5 mt-2 mt-lg-5 pb-md-4">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="col px-4 px-md-5 mt-2 mt-lg-5 pb-md-4"
+          >
             <h1 className="fw-bold">
               Steps to Build A <br /> Successful Digital Product
             </h1>
@@ -31,7 +42,7 @@ const Showcase = () => {
             <a href="#" className="btn link mt-4 mx-auto">
               Contact Us
             </a>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </>

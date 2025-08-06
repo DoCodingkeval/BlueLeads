@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FourCards from "./FourCards";
-import { TipsCards } from "./Data";
+import FourCards from "../components/FourCards";
+import { TipsCards } from "../components/Data";
 
 const Tips = () => {
   return (

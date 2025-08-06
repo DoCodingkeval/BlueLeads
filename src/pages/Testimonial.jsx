@@ -1,6 +1,6 @@
 import { Container, Row } from "react-bootstrap";
 import User from "./User";
-import { TestimonialData } from "./Data";
+import { TestimonialData } from "../components/Data";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Testimonial = () => {

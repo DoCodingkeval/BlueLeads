@@ -2,16 +2,16 @@ import React from "react";
 import { Suspense } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-const Service = React.lazy(() => import("./components/Service"));
-const Showcase = React.lazy(() => import("./components/Showcase"));
-const Modeservice = React.lazy(() => import("./components/Modeservice"));
-const Testimonial = React.lazy(() => import("./components/Testimonial"));
-const Tips = React.lazy(() => import("./components/Tips"));
-import Contact from "./components/Contact";
+import Nav from "./pages/Nav";
+import Hero from "./pages/Hero";
+const Service = React.lazy(() => import("./pages/Service"));
+const Showcase = React.lazy(() => import("./pages/Showcase"));
+const Modeservice = React.lazy(() => import("./pages/Modeservice"));
+const Testimonial = React.lazy(() => import("./pages/Testimonial"));
+const Tips = React.lazy(() => import("./pages/Tips"));
+import Contact from "./pages/Contact";
 import GotoTop from "./components/GotoTop";
-import Footer from "./components/Footer";
+import Footer from "./pages/Footer";
 import Online from "./components/Online";
 
 function App() {
