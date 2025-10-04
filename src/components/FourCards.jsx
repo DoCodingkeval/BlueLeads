@@ -9,7 +9,7 @@ const FourCards = (props) => {
                 />
             </picture>
             <div className="flex flex-col gap-y-1.5">
-                <h5 className="font-simple tracking-wide text-lg">{props.title}</h5>
+                <h5 className="font-semibold tracking-wide text-lg">{props.title}</h5>
                 <div className="text-neutral-600 text-sm leading-relaxed">
                     <p>{props.description}</p>
                 </div>

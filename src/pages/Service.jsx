@@ -20,7 +20,7 @@ const Service = () => {
                                 delay: item * 0.2,
                             }}
                             key={item.id}
-                            className="rounded-10 border border-neutral-200 p-7 sm:w-2/3 lg:w-full"
+                            className="rounded-10 border border-neutral-200 p-7 sm:w-2/3 lg:w-full hover:scale-105 hover:shadow transition-all duration-500"
                         >
                             <img src={item.imgsrc} className="size-3/4 mx-auto" alt="image" />
                             <h5 className="font-semibold">{item.card_title}</h5>

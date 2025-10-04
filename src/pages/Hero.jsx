@@ -10,7 +10,7 @@ const Hero = () => {
 
     return (
             <section
-                className="w-full min-h-screen pt-20 pb-10 grid lg:grid-cols-2 lg:place-items-center gap-y-4"
+                className="w-full min-h-screen pt-20 pb-10 grid lg:grid-cols-2 lg:place-items-center"
                 id="home"
             >
                 <motion.div
@@ -45,7 +45,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     src={hero}
                     loading="lazy"
-                    className="max-[425px]:w-full w-5/6 sm:w-2/3 mx-auto lg:w-5/6 xl:w-full"
+                    className="max-[425px]:w-full w-5/6 sm:w-2/3 mx-auto lg:w-5/6"
                     alt="heroimg"
                 />
         </section>
