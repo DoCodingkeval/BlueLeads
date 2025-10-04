@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+a {
+    text-decoration: none !important;
+}
+
+@theme {
+    --font-montalternate: "Montserrat Alternates", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+    --radius-10: 10px;
+}
+
+body {
+    font-family: var(--font-montserrat);
+    padding: 0 1rem;
+}
+@media screen and (min-width: 640px) {
+    body{
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 80rem) {
+    section:not(:nth-child(8)){
+        max-width: 72rem;
+        margin-inline: auto;
+    }
+}

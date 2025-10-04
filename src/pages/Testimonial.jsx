@@ -1,90 +1,36 @@
-import { Container, Row } from "react-bootstrap";
 import User from "./User";
 import { TestimonialData } from "../components/Data";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import Title from "../shared/Title";
+import { RiArrowLeftCircleLine, RiArrowRightCircleLine } from "react-icons/ri";
+import { useState } from "react";
 
 const Testimonial = () => {
-  const chunkArray = (arr, size) => {
-    const result = [];
-    for (let i = 0; i < arr.length; i += size) {
-      result.push(arr.slice(i, i + size));
+    const [index, setIndex] = useState(0);
+    const next = () => {
+        setIndex((prev) => (prev + 1) % TestimonialData.length);
     }
-    return result;
-  };
-
-  const UserAllData = chunkArray(TestimonialData, 3);
-
-  return (
-    <>
-      <Container className="testimonial-section mb-5 pb-5" id="testimonials">
-        <h1 className="cmn-heading text-center text-capitalize text-white mt-3 mt-lg-5 pt-lg-5 mb-5 mb-md-0">
-          What client say <br /> about us
-          <hr className="w-25 mx-auto" />
-        </h1>
-        <div id="carouselExampleIndicators" className="carousel slide">
-          <div className="carousel-indicators">
-            {UserAllData.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to={index}
-                className={index === 0 ? "active" : ""}
-                aria-current={index === 0 ? "true" : undefined}
-                aria-label={`Slide ${index + 1}`}
-              ></button>
-            ))}
-          </div>
-          <div className="carousel-inner">
-            {UserAllData.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={`carousel-item ${index === 0 ? "active" : ""}`}
-                >
-                  <Row className="row-cols-1 row-cols-md-2 row-cols-lg-3 pt-5">
-                    {item.map((item, index) => (
-                      <User
-                        key={index}
-                        imgsrc={item.imgsrc}
-                        name={item.user_name}
-                        review={item.user_review}
-                        rating={item.rating}
-                      />
-                    ))}
-                  </Row>
+    const prev = () => {
+        setIndex((prev) => (prev - 1 + TestimonialData.length) % TestimonialData.length);
+    }
+    return (
+        <section className="w-full h-full py-16" id="testimonials">
+            <Title title="What client say about us" />
+            <div className="mt-14 flex gap-x-6 overflow-hidden">
+                <div className="relative border border-neutral-300 rounded-10 mx-auto min-[500px]:w-2/3 md:w-1/2">
+                    <User
+                        imgsrc={TestimonialData[index].imgsrc}
+                        name={TestimonialData[index].user_name}
+                        review={TestimonialData[index].user_review}
+                        rating={TestimonialData[index].rating}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-between px-4">
+                        <RiArrowLeftCircleLine onClick={prev} className="size-7 text-neutral-500 hover:text-neutral-700 transition duration-200 cursor-pointer" />
+                        <RiArrowRightCircleLine onClick={next} className="size-7 text-neutral-500 hover:text-neutral-700 transition duration-200 cursor-pointer" />
+                    </div>
                 </div>
-              );
-            })}
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-      </Container>
-    </>
-  );
+            </div>
+        </section>
+    );
 };
 
 export default Testimonial;

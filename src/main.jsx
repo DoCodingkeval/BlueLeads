@@ -1,5 +1,4 @@
 import "./index.css";
-import "../src/components/sass/main.scss";
 import App from "./App.jsx";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";

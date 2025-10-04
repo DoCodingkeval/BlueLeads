@@ -1,33 +1,21 @@
 const FourCards = (props) => {
-  return (
-    <>
-      <div className="col">
-        <div className="card text-white">
-          <div className="row row-cols-md-2 row-cols-lg-1 g-md-5 align-items-center">
-            <div className="col-md-4">
-              <picture>
+    return (
+        <div className="w-full h-full">
+            <picture>
                 <img
-                  src={props.imgsrc}
-                  className="img-fluid d-md-block d-none mx-lg-auto ms-md-4"
-                  alt="phone img"
+                    src={props.imgsrc}
+                    className="min-[500px]:w-3/4 md:w-2/3 lg:w-5/6 mx-auto w-full h-full"
+                    alt="phone img"
                 />
-              </picture>
-            </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <div className="card-title">
-                  <h5 className="fw-bolder mb-3">{props.title}</h5>
+            </picture>
+            <div className="flex flex-col gap-y-1.5">
+                <h5 className="font-simple tracking-wide text-lg">{props.title}</h5>
+                <div className="text-neutral-600 text-sm leading-relaxed">
+                    <p>{props.description}</p>
                 </div>
-                <div className="card-text">
-                  <p>{props.description}</p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </>
-  );
+    );
 };
 
 export default FourCards;

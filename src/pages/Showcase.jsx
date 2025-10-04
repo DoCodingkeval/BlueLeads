@@ -1,52 +1,44 @@
 import marketing from "../assets/showcase/marketing.svg";
-import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 const Showcase = () => {
-  return (
-    <>
-      <Container className="steps-section" id="process">
-        <div className="row row-cols-lg-2 row-cols-1 text-white p-3 p-md-0">
-          <motion.div
+    return (
+        <motion.section
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col"
-          >
+            className="w-full h-full py-14 grid lg:grid-cols-2 place-items-center" id="process"
+        >
             <img
-              src={marketing}
-              loading="eager"
-              decoding="async"
-              className="img-fluid w-75 mx-auto d-block"
-              alt="phone img"
+                src={marketing}
+                loading="eager"
+                decoding="async"
+                className="sm:w-2/3 mx-auto lg:w-full"
+                alt="phone img"
             />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="col px-4 px-md-5 mt-2 mt-lg-5 pb-md-4"
-          >
-            <h1 className="fw-bold">
-              Steps to Build A <br /> Successful Digital Product
-            </h1>
-            <p className="mt-3 mt-md-4">
-              Creating a digital product that stands out requires more than just
-              an idea — it takes strategy, design thinking, and a user-first
-              mindset. From understanding your audience to building a scalable
-              solution, we guide you through every step of the journey. Whether
-              you're launching a mobile app, SaaS platform, or web tool, our
-              proven process ensures your product is built to succeed in today’s
-              digital landscape.
-            </p>
-            <a href="#" className="btn link mt-4 mx-auto">
-              Contact Us
-            </a>
-          </motion.div>
-        </div>
-      </Container>
-    </>
-  );
+            <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="">
+                <h1 className="text-2xl font-semibold md:text-3xl lg:leading-10">
+                    Steps to Build A Successful Digital Product
+                </h1>
+                <p className="text-sm leading-relaxed mt-1.5 lg:mt-2">
+                    Creating a digital product that stands out requires more than just
+                    an idea — it takes strategy, design thinking, and a user-first
+                    mindset. From understanding your audience to building a scalable
+                    solution, we guide you through every step of the journey. Whether
+                    you're launching a mobile app, SaaS platform, or web tool, our
+                    proven process ensures your product is built to succeed in today’s
+                    digital landscape.
+                </p>
+                <a href="#" className="w-max mt-4 text-sm flex items-center gap-x-2 tracking-wider font-semibold bg-blue-500 text-white py-2 px-6 rounded-10 lg:px-7 lg:py-2.5">
+                    Contact Us
+                </a>
+            </motion.div>
+        </motion.section>
+    );
 };
 
 export default Showcase;

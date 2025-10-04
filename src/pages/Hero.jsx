@@ -1,64 +1,55 @@
-import { Container, Row } from "react-bootstrap";
 import hero from "../assets/hero/hero.svg";
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import { RiArrowRightLine } from "react-icons/ri";
 
 const Hero = () => {
-  const divVariant = {
-    hidden: { opacity: 0, y: -100 },
-    show: { opacity: 1, y: 0 },
-  };
+    const divVariant = {
+        hidden: { opacity: 0, y: -100 },
+        show: { opacity: 1, y: 0 },
+    };
 
-  return (
-    <>
-      <Container
-        as="div"
-        className="heroSection text-center d-flex justify-content-center align-items-center"
-        id="home"
-      >
-        <Row className="mt-lg-5 pt-lg-4">
-          <motion.div
-            variants={divVariant}
-            initial="hidden"
-            animate="show"
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="center col-md-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-1 mt-lg-5 pt-lg-5"
-          >
-            <h1>
-              <span className="fw-bolder">W</span>
-              <span className="text-white fw-bold">
-                e Collect High
-                <br />
-                Quality Leads
-              </span>
-            </h1>
-            <p className="mt-md-3 text-lg-start text-gray">
-              Reach the right customers through targeted strategies that drive
-              engagement and sales. From SEO to paid ads, we bring you leads
-              that matter — so you can grow faster, smarter.
-            </p>
-            <Link
-              to="/"
-              className="btn link mt-2 mt-md-3 mx-auto mx-lg-0 fw-bold"
+    return (
+            <section
+                className="w-full min-h-screen pt-20 pb-10 grid lg:grid-cols-2 lg:place-items-center gap-y-4"
+                id="home"
             >
-              Get Started
-            </Link>
-          </motion.div>
-          <div className="col-12 col-lg-6 mb-lg-0 pb-3 text-lg-end order-0">
-            <motion.img
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              src={hero}
-              loading="lazy"
-              className="img-fluid"
-              alt="heroimg"
-            />
-          </div>
-        </Row>
-      </Container>
-    </>
-  );
+                <motion.div
+                    variants={divVariant}
+                    initial="hidden"
+                    animate="show"
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className=""
+                >
+                    <div className="text-4xl font-montalternate font-semibold text-neutral-800 md:text-5xl lg:text-6xl lg:leading-17">
+                        <span className="text-blue-600 font-extrabold">W</span>
+                        <span>
+                            e Collect High
+                            Quality Leads
+                        </span>
+                    </div>
+                    <p className="text-neutral-500 mt-2 xl:mt-3.5 text-sm leading-relaxed sm:w-3/4 md:text-lg">
+                        Reach the right customers through targeted strategies that drive
+                        engagement and sales.
+                    </p>
+                    <a
+                        href="#"
+                        className="w-max mt-4 text-sm flex items-center gap-x-2 font-semibold bg-blue-500 text-white py-2 px-4 rounded-10 tracking-wider group lg:px-5 lg:py-2.5 xl:px-6"
+                    >
+                        Get Started
+                        <RiArrowRightLine size={22} className="group-hover:translate-x-0.5 transition-all duration-200 ease-in" />
+                    </a>
+                </motion.div>
+                <motion.img
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    src={hero}
+                    loading="lazy"
+                    className="max-[425px]:w-full w-5/6 sm:w-2/3 mx-auto lg:w-5/6 xl:w-full"
+                    alt="heroimg"
+                />
+        </section>
+    );
 };
 
 export default Hero;
